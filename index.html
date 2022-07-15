@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anıl Karaşah Personel Website</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/src/scripts/style.css" />
   </head>
   <body>
     <!-- HEADER -->
@@ -15,43 +15,71 @@
 
     <!-- MAIN CONTENT -->
     <main>
-      <div class="content welcome-content">
+      <content class="content-welcome">
         <div class="container">
           <h1>
             Merhaba, ben <span id="introduce" href="/">Anıl Karaşah</span>
           </h1>
           <p>Kendimi tanıtmam gerekirse...</p>
-          <a>Linkedin hesabım</a>
-          <a>Github hesabım</a>
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/anilkarasah"> Linkedin </a>
+            </li>
+            <li>
+              <a href="https://www.github.com/anilkarasah"> Github </a>
+            </li>
+          </ul>
           <img alt="buraya fotoğrafım gelecek" />
         </div>
-      </div>
-      <div class="content main-content">
+      </content>
+      <content class="content-main">
         <div class="container">
           <h1>Tech-Stack</h1>
-          <h2>Programlama Dilleri</h2>
-          <p>C, Java, C#, Javascript, HTML/CSS</p>
-
-          <h2>Frameworkler ve fazlası</h2>
-          <p>
-            ASP.NET Core, Entity Framework, Node.js, Express, Mongoose, MSSQL,
-            MongoDB
-          </p>
+          <ul>
+            <li><h2>Programlama Dilleri</h2></li>
+            <li>
+              <ul>
+                <li>C</li>
+                <li>Java</li>
+                <li>C#</li>
+                <li>Javascript</li>
+                <li>HTML/CSS</li>
+              </ul>
+            </li>
+            <li><h2>Frameworkler ve fazlası</h2></li>
+            <li>
+              <ul>
+                <li>ASP.NET Core</li>
+                <li>Entity Framework</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Mongoose</li>
+                <li>MSSQL</li>
+                <li>MongoDB</li>
+              </ul>
+            </li>
+          </ul>
 
           <h1>Projelerim</h1>
-          <h2>Harcama Yönetim Sistemi</h2>
-          <p>
-            Harcamalarınızı yönetmenize yarayan, günümüz cüzdan uygulamalarına
-            benzer çalışan bir projenin Back-End programlamasını yaptım.
-          </p>
-
-          <h2>Nerdle Kopyası</h2>
-          <p>
-            Wordle oyununun matematiksel denklemler üzerinden oynandığı bir oyun
-            olan Nerdle'ın, Java kullanarak bir kopyasını oluşturdum.
-          </p>
+          <ul>
+            <li><h2>Harcama Yönetim Sistemi</h2></li>
+            <li>
+              <p>
+                Harcamalarınızı yönetmenize yarayan, günümüz cüzdan
+                uygulamalarına benzer çalışan bir projenin Back-End
+                programlamasını yaptım.
+              </p>
+            </li>
+            <li><h2>Nerdle Kopyası</h2></li>
+            <li>
+              <p>
+                Wordle oyununun matematiksel denklemler üzerinden oynandığı bir
+                oyun olan Nerdle'ın, Java kullanarak bir kopyasını oluşturdum.
+              </p>
+            </li>
+          </ul>
         </div>
-      </div>
+      </content>
     </main>
 
     <!-- FOOTER -->
@@ -60,5 +88,7 @@
       <p>Email</p>
       <p>Sosyal medya</p>
     </footer>
+
+    <script type="text/javascript" src="/src/scripts/scripts.js"></script>
   </body>
 </html>

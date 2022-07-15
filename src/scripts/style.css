@@ -5,7 +5,6 @@
   --color-secondary: #333;
   --color-accent: #e6d38e;
   --font-family: 'Poppins', sans-serif;
-  --section-rotate: 9rem;
 }
 
 * {
@@ -19,6 +18,10 @@ h1 {
   font-weight: 300;
   line-height: 2rem;
   font-size: 1.5rem;
+}
+
+ul {
+  list-style: none;
 }
 
 a {
@@ -51,7 +54,7 @@ header {
   background-color: var(--color-secondary);
 }
 
-header > a {
+header a {
   color: #fff;
   padding: 0 2rem;
   font-weight: 200;
@@ -67,49 +70,36 @@ main {
 }
 
 .container {
-  width: 50%;
+  padding: 5rem;
   margin: auto;
 }
 
-.content {
+content {
+  display: block;
   width: 100%;
-  padding: 3vw 0;
   font-weight: 300;
 }
 
-.welcome-content {
-  /* padding: 7rem; */
-  height: 15vw;
+.content-welcome {
+  height: 48rem;
   font-size: 1.5rem;
   background: rgb(112, 135, 63);
-  background: linear-gradient(320deg, #a7b872 0%, #e6d38e 100%);
+  background: linear-gradient(40deg, #e6d38e 0%, #a7b872 100%);
   color: var(--color-secondary);
 }
 
-.welcome-content #introduce {
+.content-welcome #introduce {
   font-weight: 600;
   font-size: 1.5rem;
   color: var(--color-secondary);
 }
-.welcome-content #introduce:hover {
+.content-welcome #introduce:hover {
   text-shadow: #2224 0 0.1rem 0.5rem;
-  /* font-style: italic; */
 }
 
-.main-content {
+.content-main {
   background-color: var(--color-primary);
   color: var(--color-secondary);
-  position: relative;
   width: 100%;
-  margin-top: calc(0px - var(--section-rotate));
-  padding: calc(var(--section-rotate) + 5rem) 0;
-  clip-path: polygon(0 var(--section-rotate), 100% 0, 100% 100%, 0% 100%);
-  -webkit-clip-path: polygon(
-    0 var(--section-rotate),
-    100% 0,
-    100% 100%,
-    0% 100%
-  );
-  z-index: 10;
-  height: 10rem;
+  height: min-content;
 }
