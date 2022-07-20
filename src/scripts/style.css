@@ -27,6 +27,15 @@ h1 {
   line-height: 3.5rem;
   font-size: 2.5rem;
   display: inline;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 600;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  display: inline;
+  text-align: center;
 }
 
 ul {
@@ -41,7 +50,6 @@ a {
 
 body {
   padding: 2rem;
-  /* background-color: ; */
   color: var(--color-secondary);
   font-size: 1rem;
   line-height: 1.5rem;
@@ -60,7 +68,6 @@ body {
 .animate:hover {
   transform: translateY(-0.2rem);
   text-shadow: #0005 0 4px 20px;
-  /* text-decoration: underline; */
 }
 
 .text--thin {
@@ -124,14 +131,13 @@ content {
 .container {
   position: absolute;
   width: 50vw;
-  min-height: 48rem;
   left: 25%;
 }
 
+/* WELCOME SECTION */
 #content-welcome {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   height: 48rem;
   font-size: 1.5rem;
   background: rgb(112, 135, 63);
@@ -140,22 +146,27 @@ content {
 }
 
 #content-welcome #introduce {
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: var(--color-secondary);
-}
-#content-welcome #introduce:hover {
-  text-shadow: #2224 0 0.1rem 0.5rem;
+  z-index: 10;
 }
 
 #content-welcome #img-anilkarasah {
-  position: absolute;
+  /* position: absolute; */
   height: 48rem;
   top: 0;
-  right: 0;
+  /* right: 0; */
+  z-index: 1;
 }
 
-#content-main {
+#content-welcome #welcome-text {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* TECH-STACK SECTION */
+#content-tech {
   background-color: var(--color-primary);
   color: var(--color-secondary);
   width: 100%;
@@ -167,6 +178,7 @@ content {
 ul.list-techstack {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 ul.list-techstack li {
@@ -174,15 +186,25 @@ ul.list-techstack li {
   padding: 0.5rem;
 }
 
+/* PROJECTS SECTION */
+#content-projects {
+  background-color: #ddd;
+}
+
+/* FOOTER SECTION */
 footer {
   padding: 1.5rem;
+  height: 5rem;
   width: 100%;
   background-color: var(--color-secondary);
   color: var(--color-primary);
-  position: sticky;
+}
+
+footer > .container {
+  height: 2rem;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  flex-direction: row;
 }
 
 footer a#email {
@@ -191,6 +213,7 @@ footer a#email {
   line-height: 2rem;
   font-size: 1rem;
   text-align: center;
+  padding: 0 0.5rem;
 }
 
 footer a.social {
@@ -198,4 +221,16 @@ footer a.social {
   line-height: 1.5rem;
   color: var(--color-primary);
   padding: 0 0.5rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  #content-welcome #welcome-text {
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  #img-anilkarasah {
+    position: absolute;
+  }
 }
