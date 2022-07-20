@@ -19,7 +19,7 @@
   <body>
     <!-- HEADER -->
     <header>
-      <a href="/" class="animate">Anıl Karaşah</a>
+      <a class="animate">Anıl Karaşah</a>
     </header>
 
     <!-- WELCOME SECTION -->
@@ -28,7 +28,7 @@
         <div class="container" id="welcome-text">
           <div id="introduce">
             <h1>Merhaba, ben</h1>
-            <h1 class="animate" style="display: block">Anıl Karaşah</h1>
+            <h1 class="animate" id="title-anilkarasah">Anıl Karaşah</h1>
           </div>
           <img
             id="img-anilkarasah"
@@ -40,54 +40,79 @@
       <content id="content-tech">
         <div class="container flex flex-column">
           <h1>Tech-Stack</h1>
-          <ul>
-            <li><h2>Programlama Dilleri</h2></li>
-            <li>
-              <ul class="list-techstack text--bold">
-                <li>C</li>
-                <li>Java</li>
-                <li>C#</li>
-                <li>Javascript</li>
-                <li>HTML/CSS</li>
-              </ul>
-            </li>
-            <li><h2>Frameworkler ve fazlası</h2></li>
-            <li>
-              <ul class="list-techstack text--bold">
-                <li>.NET Core</li>
-                <li>Entity Framework</li>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>Mongoose</li>
-                <li>MSSQL</li>
-                <li>MongoDB</li>
-              </ul>
-            </li>
+
+          <h2>Programlama Dilleri</h2>
+          <ul class="list-techstack text--bold" id="techstack-main">
+            <li>C</li>
+            <li>Java</li>
+            <li>C#</li>
+            <li>Javascript</li>
+            <li>HTML/CSS</li>
+          </ul>
+
+          <h2>Frameworkler ve fazlası</h2>
+          <ul class="list-techstack text--bold" id="techstack-framework">
+            <li>.NET Core</li>
+            <li>Entity FW</li>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>Mongoose</li>
+            <li>MSSQL</li>
+            <li>MongoDB</li>
           </ul>
         </div>
       </content>
 
       <!-- PROJECTS SECTION -->
       <content id="content-projects">
-        <div class="container">
-          <h1>Projelerim</h1>
-          <ul>
-            <li><h2>Harcama Yönetim Sistemi</h2></li>
-            <li>
+        <div class="container flex flex-column">
+          <h1>Çalışmalarım</h1>
+
+          <div class="flex flex-row" id="card-project">
+            <article class="flex flex-column">
+              <a
+                href="https://github.com/anilkarasah/BugTrackerSystem"
+                class="animate"
+                target="_blank"
+                >Bug Tracker Sistemi (WIP)</a
+              >
+              <p>
+                Yönetilen projelerle alakalı bulunan hataları izleme ve
+                ayıklamak için geliştirilen Bug Tracker sistemlerinin basit bir
+                halini .NET Core ve MSSQL ile RESTful API olarak tasarlıyorum.
+                Projenin gidişatına göre, öncelikle Angular'ı Tech-Stack'ime
+                dahil edip sonrasında bu projeye bir UI tasarımı olarak eklemeyi
+                planlıyorum.
+              </p>
+            </article>
+
+            <article class="flex flex-column">
+              <a
+                href="https://github.com/anilkarasah/ExpenseManagementSystem"
+                class="animate"
+                target="_blank"
+                >Harcama Yönetim Sistemi</a
+              >
               <p>
                 Harcamalarınızı yönetmenize yarayan, günümüz cüzdan
                 uygulamalarına benzer çalışan bir projenin Back-End
                 programlamasını yaptım.
               </p>
-            </li>
-            <li><h2>Nerdle Kopyası</h2></li>
-            <li>
+            </article>
+
+            <article class="flex flex-column">
+              <a
+                href="https://github.com/anilkarasah/NerdleClone"
+                class="animate"
+                target="_blank"
+                >Nerdle Kopyası</a
+              >
               <p>
                 Wordle oyununun matematiksel denklemler üzerinden oynandığı bir
                 oyun olan Nerdle'ın, Java kullanarak bir kopyasını oluşturdum.
               </p>
-            </li>
-          </ul>
+            </article>
+          </div>
         </div>
       </content>
     </main>
@@ -99,22 +124,26 @@
           href="mailto:anilkarasah+contact@hotmail.com"
           class="animate"
           id="email"
-          >Email</a
         >
-        <a
-          href="https://www.linkedin.com/in/anilkarasah"
-          class="social animate"
-          target="_blank"
-        >
-          <i class="fa-brands fa-linkedin"></i>
+          Email ile bana ulaş
         </a>
-        <a
-          href="https://www.github.com/anilkarasah"
-          class="social animate"
-          target="_blank"
-        >
-          <i class="fa-brands fa-github"></i>
-        </a>
+
+        <div id="sociallinks">
+          <a
+            href="https://www.linkedin.com/in/anilkarasah"
+            class="social"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a
+            href="https://www.github.com/anilkarasah"
+            class="social"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
       </div>
     </footer>
   </body>
