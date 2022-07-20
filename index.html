@@ -6,39 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anıl Karaşah Personel Website</title>
     <link rel="stylesheet" href="/src/scripts/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="text/javascript" src="/src/scripts/scripts.js" defer></script>
   </head>
   <body>
     <!-- HEADER -->
     <header>
-      <a href="/">Anıl Karaşah</a>
+      <a href="/" class="animate">Anıl Karaşah</a>
     </header>
 
     <!-- MAIN CONTENT -->
     <main>
-      <content class="content-welcome">
+      <content id="content-welcome">
         <div class="container">
-          <h1>
-            Merhaba, ben <span id="introduce" href="/">Anıl Karaşah</span>
-          </h1>
-          <p>Kendimi tanıtmam gerekirse...</p>
-          <ul>
-            <li>
-              <a href="https://www.linkedin.com/in/anilkarasah"> Linkedin </a>
-            </li>
-            <li>
-              <a href="https://www.github.com/anilkarasah"> Github </a>
-            </li>
-          </ul>
-          <img alt="buraya fotoğrafım gelecek" />
+          <h1 class="animate">Merhaba, ben Anıl Karaşah</h1>
+          <img
+            id="img-anilkarasah"
+            src="/src/img/anilkarasah.jpeg"
+            alt="Anıl Karaşah"
+          />
         </div>
       </content>
-      <content class="content-main">
-        <div class="container">
+      <content id="content-main">
+        <div class="container flex flex-column">
           <h1>Tech-Stack</h1>
           <ul>
             <li><h2>Programlama Dilleri</h2></li>
             <li>
-              <ul>
+              <ul class="list-techstack text--bold">
                 <li>C</li>
                 <li>Java</li>
                 <li>C#</li>
@@ -48,8 +49,8 @@
             </li>
             <li><h2>Frameworkler ve fazlası</h2></li>
             <li>
-              <ul>
-                <li>ASP.NET Core</li>
+              <ul class="list-techstack text--bold">
+                <li>.NET Core</li>
                 <li>Entity Framework</li>
                 <li>Node.js</li>
                 <li>Express</li>
@@ -59,7 +60,11 @@
               </ul>
             </li>
           </ul>
+        </div>
+      </content>
 
+      <content id="content-projects">
+        <div class="container">
           <h1>Projelerim</h1>
           <ul>
             <li><h2>Harcama Yönetim Sistemi</h2></li>
@@ -83,12 +88,27 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
-      <h1>Bana ulaşın</h1>
-      <p>Email</p>
-      <p>Sosyal medya</p>
+    <footer class="flex flex-row">
+      <a
+        href="mailto:anilkarasah+contact@hotmail.com"
+        class="animate"
+        id="email"
+        >Email</a
+      >
+      <a
+        href="https://www.linkedin.com/in/anilkarasah"
+        class="social animate"
+        target="_blank"
+      >
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a
+        href="https://www.github.com/anilkarasah"
+        class="social animate"
+        target="_blank"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
     </footer>
-
-    <script type="text/javascript" src="/src/scripts/scripts.js"></script>
   </body>
 </html>
