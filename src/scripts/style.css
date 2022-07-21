@@ -183,7 +183,7 @@ content {
 }
 
 #content-tech h1 {
-  padding-bottom: 3rem;
+  padding: 2rem 0;
 }
 
 ul.list-techstack {
@@ -235,7 +235,7 @@ ul#techstack-framework li {
 }
 
 #content-projects h1 {
-  padding-bottom: 3rem;
+  padding: 2rem 0;
 }
 
 #card-project {
