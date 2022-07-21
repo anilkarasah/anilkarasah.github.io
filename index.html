@@ -24,7 +24,7 @@
 
     <!-- WELCOME SECTION -->
     <main>
-      <content id="content-welcome">
+      <content id="content-welcome" style="position: relative">
         <div class="container" id="welcome-text">
           <div id="introduce">
             <h1>Merhaba, ben</h1>
@@ -37,11 +37,35 @@
           />
         </div>
       </content>
+
+      <content id="content-about">
+        <div class="container flex flex-column flex-gap">
+          <h1 tabindex="0">Hakkımda</h1>
+
+          <p>
+            Tam ismim <span id="focus">Mehmet Anıl Karaşah</span>. Yıldız Teknik
+            Üniversitesi'nde <span id="focus">Bilgisayar Mühendisliği</span> 3.
+            sınıf öğrencisiyim. 11 yaşımda ilk kez HTML öğrenerek başladığım
+            yazılım yolculuğunda bugün ciddi bir noktaya geldim. Çoğunlukla
+            <span id="focus">Back-End teknolojilerine</span>
+            odaklıyım ve devamlı olarak kendimi geliştirmeye çalışıyorum.
+          </p>
+
+          <p>
+            Şu an
+            <a href="http://yildizskylab.com/" class="animate" target="_blank"
+              >YTÜ Skylab</a
+            >'in <span id="focus">WEBLAB</span> isimli Web geliştirme ekibinde
+            Back-End yazılımcısıyım.
+          </p>
+        </div>
+      </content>
+
       <content id="content-tech">
-        <div class="container flex flex-column">
+        <div class="container flex flex-column flex-gap">
           <h1 tabindex="0">Tech-Stack</h1>
 
-          <h2>Programlama Dilleri</h2>
+          <h2>Ana Programlama Dilleri</h2>
           <ul class="list-techstack text--bold" id="techstack-main">
             <li>C</li>
             <li>Java</li>
@@ -50,7 +74,7 @@
             <li>HTML/CSS</li>
           </ul>
 
-          <h2>Frameworkler ve fazlası</h2>
+          <h2>Araçlar ve Teknolojiler</h2>
           <ul class="list-techstack text--bold" id="techstack-framework">
             <li>.NET Core</li>
             <li>Entity FW</li>
@@ -65,7 +89,7 @@
 
       <!-- PROJECTS SECTION -->
       <content id="content-projects">
-        <div class="container flex flex-column">
+        <div class="container flex flex-column flex-gap">
           <h1 tabindex="0">Çalışmalarım</h1>
 
           <div class="flex flex-row" id="card-project">
