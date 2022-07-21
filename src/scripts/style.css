@@ -102,7 +102,6 @@ header {
   padding: 0.5rem;
   width: 100%;
   background-color: var(--color-secondary);
-  position: sticky;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,7 +143,7 @@ content {
   justify-content: space-between;
   height: 48rem;
   font-size: 1.5rem;
-  background: rgb(112, 135, 63);
+  background: #b2b998;
   background: linear-gradient(130deg, #fff1bd 0%, #b2b998 100%);
   color: var(--color-secondary);
 }
@@ -184,7 +183,7 @@ content {
 }
 
 #content-tech h1 {
-  padding: 3rem 0;
+  padding-bottom: 3rem;
 }
 
 ul.list-techstack {
@@ -204,8 +203,15 @@ ul.list-techstack li {
   background-color: #ddd;
 }
 
-ul.list-techstack li:hover {
-  background-color: #ccc;
+ul.list-techstack li:hover,
+ul.list-techstack li:focus,
+ul.list-techstack li:active {
+  background-color: #fff1bd;
+  background: linear-gradient(130deg, #fff1bd 0%, #d6dfb8 100%);
+}
+
+ul.list-techstack li:nth-child(2n) {
+  background-color: #e2e2e2;
 }
 
 ul.list-techstack li:last-child {
@@ -223,11 +229,13 @@ ul#techstack-framework li {
 /* PROJECTS SECTION */
 #content-projects {
   background-color: #ddd;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 #content-projects h1 {
-  padding: 3rem 0;
+  padding-bottom: 3rem;
 }
 
 #card-project {
@@ -235,12 +243,12 @@ ul#techstack-framework li {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 #card-project article {
   padding: 1rem;
-  width: 30%;
+  width: 32%;
   height: 13rem;
   border-radius: 1rem;
   background-color: var(--color-primary);
@@ -284,14 +292,12 @@ footer a#email {
   line-height: 2rem;
   font-size: 1rem;
   text-align: center;
-  padding: 0 0.5rem;
 }
 
 footer a.social {
   font-size: 1.5rem;
   line-height: 2rem;
   color: var(--color-primary);
-  margin: 0 0.5rem;
 }
 
 /* MEDIA QUERIES */
