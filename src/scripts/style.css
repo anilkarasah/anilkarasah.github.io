@@ -114,7 +114,6 @@ main {
 }
 
 content {
-  /* position: relative; */
   width: 100%;
   min-height: 30rem;
   font-weight: 300;
@@ -124,7 +123,7 @@ content {
 }
 
 content:nth-child(2n + 1) {
-  background-color: #ddd;
+  background-color: #e3e3e3;
 }
 
 content:nth-child(2n) {
@@ -314,8 +313,6 @@ footer a.social {
   }
 
   content {
-    /* #content-about, */
-    /* #content-techstack { */
     min-height: 40rem;
   }
 
