@@ -1,0 +1,82 @@
+{
+  "htmlLang": "tr",
+  "title": "Ben Anıl Karaşah",
+  "introduce": "Merhaba, ben",
+  "myImg": "anilkarasah.jpeg",
+  "aboutTitle": "Hakkımda",
+  "aboutParagraph": "Tam ismim <span id='focus'>Mehmet Anıl Karaşah</span>. Yıldız Teknik Üniversitesi'nde <span id='focus'>Bilgisayar Mühendisliği</span> 3. sınıf öğrencisiyim. 11 yaşımda ilk kez HTML öğrenerek başladığım yazılım yolculuğunda bugün ciddi bir noktaya geldim. Çoğunlukla <span id='focus'>Back-End teknolojilerine</span> odaklıyım ve devamlı olarak kendimi geliştirmeye çalışıyorum.",
+  "aboutPosition": "Şu an <a href='http://yildizskylab.com/' class='animate' target='_blank'>YTÜ Skylab</a>'in <span id='focus'>WEBLAB</span> isimli Web geliştirme ekibinde Back-End yazılımcısıyım.",
+  "techstackTitle": "Teknoloji Yığınım",
+  "techstackPlTitle": "Programlama Dilleri",
+  "techstackPl": ["C", "C#", "Java", "Javascript", "HTML/CSS"],
+  "techstackFwTitle": "Araçlar ve Teknolojiler",
+  "techstackFw": [
+    ".NET Core",
+    "Entity FW",
+    "MSSQL",
+    "Node.js",
+    "Express",
+    "Mongoose",
+    "MongoDB"
+  ],
+  "projectsTitle": "Çalışmalarım",
+  "projects": [
+    {
+      "title": "Bug Tracker Sistemi (WIP)",
+      "description": "Yönetilen projelerle alakalı bulunan hataları izleme ve ayıklamak için geliştirilen Bug Tracker sistemlerinin basit bir halini .NET Core ve MSSQL ile RESTful API olarak tasarlıyorum. Projenin gidişatına göre, öncelikle Angular'ı Tech-Stack'ime dahil edip sonrasında bu projeye bir UI tasarımı olarak eklemeyi planlıyorum.",
+      "url": "https://github.com/anilkarasah/BugTrackerSystem"
+    },
+    {
+      "title": "Nerdle Kopyası",
+      "description": "Wordle oyununun matematiksel denklemler üzerinden oynandığı bir oyun olan Nerdle'ın, Java kullanarak bir kopyasını oluşturdum.",
+      "url": "https://github.com/anilkarasah/NerdleClone"
+    },
+    {
+      "title": "Harcama Yönetim Sistemi API",
+      "description": "Harcamalarınızı yönetmenize yarayan, günümüz cüzdan uygulamalarına benzer çalışan bir projenin Back-End programlamasını yaptım.",
+      "url": "https://github.com/anilkarasah/ExpenseManagementSystem"
+    },
+    {
+      "title": "Dijital Oyun Satış Platformu",
+      "description": ".NET, SQL ve HTML/CSS/JS kullandığım bu Full-Stack projede Steam benzeri bir oyun satış platformu yaptım. Çok basit seviyede olan bu proje sayesinde C# ve .NET teknolojilerine aşinalığım arttı.",
+      "url": "https://github.com/anilkarasah/DOSP"
+    },
+    {
+      "title": "Nonogram Puzzle",
+      "description": "C dilini kullanarak terminal ekranı üzerinden oynanan bir Nonogram bulmaca oyunu ürettim.",
+      "url": "https://github.com/anilkarasah/Nonogram"
+    },
+    {
+      "title": "Kızma Birader",
+      "description": "Bilgisayar Bilimlerine Giriş dersimin projesi olarak yazdığım bu proje, benim programlama hayatımın ilk somut ürünü. Bunun getirisi olarak da oyunda birçok hata bulmanız mümkün.",
+      "url": "https://github.com/anilkarasah/AnilKarasah/tree/main/KizmaBirader"
+    },
+    {
+      "title": "Veritabanı Klonu",
+      "description": "Yapısal Programlama dersimin projesi olarak bu projeyi oluşturdum. C dilinde yazdığım bu projede, linkli liste veri yapısını ve File System kullanarak kendi veritabanımı oluşturdum.",
+      "url": "https://github.com/anilkarasah/AnilKarasah/tree/main/LinkedListDatabase"
+    },
+    {
+      "title": "Sayısal Analiz Yöntemleri",
+      "description": "Sayısal Analiz dersimde öğrendiğimiz yöntemleri bu projede birleştirerek çok amaçlı bir hesap makinesi oluşturdum.",
+      "url": "https://github.com/anilkarasah/AnilKarasah/tree/main/NumericalAnalysisCalculator"
+    },
+    {
+      "title": "Coding Challenges",
+      "description": "Advent of Code ve Project Euler gibi algoritma problemlerini çözmeye çalışıyorum, bunlara ek olarak da küçük algoritmalarımı paylaşıyorum.",
+      "url": "https://github.com/anilkarasah/CodingChallenges"
+    }
+  ],
+  "contactEmail": "anilkarasah+contact@hotmail.com",
+  "footerEmail": "Email ile bana ulaş",
+  "social": [
+    {
+      "icon": "fa-brands fa-linkedin",
+      "url": "https://www.linkedin.com/in/anilkarasah"
+    },
+    {
+      "icon": "fa-brands fa-github",
+      "url": "https://www.github.com/anilkarasah"
+    }
+  ]
+}
