@@ -60,15 +60,14 @@ body {
 
 /* TEXT CLASSES */
 .animate {
-  transition: transform 0.2s, text-shadow 0.2s;
+  transition: all 0.2s;
   text-shadow: none;
   transform: translateX(0);
   cursor: pointer;
 }
 
 .animate:hover,
-.animate:focus,
-.animate:active {
+.animate:focus {
   transform: translateY(-0.2rem);
   text-shadow: #0005 0 4px 20px;
   text-decoration: underline;
@@ -209,8 +208,7 @@ ul.list-techstack li {
 }
 
 ul.list-techstack li:hover,
-ul.list-techstack li:focus,
-ul.list-techstack li:active {
+ul.list-techstack li:focus {
   background-color: #fff1bd;
   background: linear-gradient(130deg, #fff1bd 0%, #d6dfb8 100%);
 }
