@@ -23,7 +23,7 @@
 
     <!-- WELCOME SECTION -->
     <main>
-      <content id="content-welcome" style="position: relative">
+      <container id="container-welcome">
         <div class="container" id="welcome-text">
           <div id="introduce">
             <h1>Hi, I am</h1>
@@ -35,17 +35,18 @@
             alt="Anıl Karaşah"
           />
         </div>
-      </content>
+      </container>
 
-      <content id="content-about">
+      <container id="container-about">
         <div class="container flex flex-column flex-gap">
           <h1 tabindex="0">About Me</h1>
           <p>
-            My full name is <span id="focus">Mehmet Anıl Karaşah</span>. I am
-            studying <span id="focus">Computer Engineering</span> at Yıldız
-            Technical University. I have come to a serious point today in my
-            coding journey, which I first started by learning HTML when I was 11
-            years old. I am currently focused on
+            My full name is
+            <span id="focus">Mehmet Anıl Karaşah</span>. I am studying
+            <span id="focus">Computer Engineering</span> at Yıldız Technical
+            University. I have come to a serious point today in my coding
+            journey, which I first started by learning HTML when I was 11 years
+            old. I am currently focused on
             <span id="focus">Back-End technologies</span> and try to improve
             myself about it everyday.
           </p>
@@ -54,9 +55,9 @@
             Skylab's Web Development Team.
           </p>
         </div>
-      </content>
+      </container>
 
-      <content id="content-tech">
+      <container id="container-tech">
         <div class="container flex flex-column flex-gap">
           <h1 tabindex="0">Tech-Stack</h1>
 
@@ -72,18 +73,18 @@
           <h2>Frameworks and other</h2>
           <ul class="list-techstack text--bold" id="techstack-framework">
             <li>.NET Core</li>
-            <li>Entity FW</li>
-            <li>MSSQL</li>
+            <li>Docker</li>
+            <li>SQL</li>
             <li>Node.js</li>
             <li>Express</li>
             <li>Mongoose</li>
             <li>MongoDB</li>
           </ul>
         </div>
-      </content>
+      </container>
 
       <!-- PROJECTS SECTION -->
-      <content id="content-projects">
+      <container id="container-projects">
         <div class="container flex flex-column flex-gap">
           <h1 tabindex="0">My Projects</h1>
           <div class="flex flex-row" id="card-project">
@@ -92,14 +93,15 @@
                 href="https://github.com/anilkarasah/BugTrackerSystem"
                 class="animate"
                 target="_blank"
+                rel="noopener"
               >
                 Bug Tracker System (WIP)
               </a>
               <p>
                 Bug Tracker System is a common tool which is used to keep track
-                of bugs of projects. I am doing a very basic REST API using .NET
-                Core and MSSQL. By the flow of the project, I might as well
-                learn Angular and add a UI design for it.
+                of bugs of projects. I have created a very basic REST API using
+                .NET Core and PostgreSQL. I am now working on its Front-End
+                Application using Angular.
               </p>
             </article>
 
@@ -108,6 +110,7 @@
                 href="https://github.com/anilkarasah/NerdleClone"
                 class="animate"
                 target="_blank"
+                rel="noopener"
               >
                 Nerdle Clone
               </a>
@@ -122,6 +125,7 @@
                 href="https://github.com/anilkarasah/ExpenseManagementSystem"
                 class="animate"
                 target="_blank"
+                rel="noopener"
               >
                 Expense Management System
               </a>
@@ -136,6 +140,7 @@
                 href="https://github.com/anilkarasah/DOSP"
                 class="animate"
                 target="_blank"
+                rel="noopener"
               >
                 DOSP
               </a>
@@ -151,6 +156,7 @@
                 href="https://github.com/anilkarasah/Nonogram"
                 class="animate"
                 target="_blank"
+                rel="noopener"
               >
                 Nonogram Puzzle
               </a>
@@ -165,6 +171,7 @@
                 href="https://github.com/anilkarasah/AnilKarasah/tree/main/KizmaBirader"
                 class="animate"
                 target="_blank"
+                rel="noopener"
               >
                 Ludo
               </a>
@@ -180,6 +187,7 @@
                 href="https://github.com/anilkarasah/AnilKarasah/tree/main/LinkedListDatabase"
                 class="animate"
                 target="_blank"
+                rel="noopener"
               >
                 My Database
               </a>
@@ -195,6 +203,7 @@
                 href="https://github.com/anilkarasah/AnilKarasah/tree/main/NumericalAnalysisCalculator"
                 class="animate"
                 target="_blank"
+                rel="noopener"
               >
                 Numerical Analysis
               </a>
@@ -209,6 +218,7 @@
                 href="https://github.com/anilkarasah/CodingChallenges"
                 class="animate"
                 target="_blank"
+                rel="noopener"
               >
                 Coding Challenges
               </a>
@@ -220,7 +230,7 @@
             </article>
           </div>
         </div>
-      </content>
+      </container>
     </main>
 
     <!-- FOOTER -->
@@ -238,6 +248,8 @@
             href="https://www.linkedin.com/in/anilkarasah"
             class="social"
             target="_blank"
+            rel="noopener"
+            title="Linkedin of Anıl Karaşah"
           >
             <i class="fa-brands fa-linkedin"></i>
           </a>
@@ -245,6 +257,8 @@
             href="https://www.github.com/anilkarasah"
             class="social"
             target="_blank"
+            rel="noopener"
+            title="Github of Anıl Karaşah"
           >
             <i class="fa-brands fa-github"></i>
           </a>

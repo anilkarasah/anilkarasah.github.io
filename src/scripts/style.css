@@ -19,6 +19,7 @@ html {
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -110,7 +111,7 @@ main {
   margin: auto;
 }
 
-content {
+container {
   width: 100%;
   min-height: 30rem;
   font-weight: 300;
@@ -119,15 +120,15 @@ content {
   justify-content: center;
 }
 
-content:nth-child(2n + 1) {
+container:nth-child(2n + 1) {
   background-color: #e3e3e3;
 }
 
-content:nth-child(2n) {
+container:nth-child(2n) {
   background-color: var(--color-primary);
 }
 
-content h1 {
+container h1 {
   line-height: 4rem;
 }
 
@@ -138,7 +139,7 @@ content h1 {
 }
 
 /* WELCOME SECTION */
-#content-welcome {
+#container-welcome {
   display: flex;
   justify-content: space-between;
   height: 85vh;
@@ -146,9 +147,10 @@ content h1 {
   background: #b2b998;
   background: linear-gradient(130deg, #fff1bd 0%, #b2b998 100%);
   color: var(--color-secondary);
+  position: relative;
 }
 
-#content-welcome #introduce {
+#container-welcome #introduce {
   z-index: 10;
 }
 
@@ -157,13 +159,13 @@ content h1 {
   animation: anilkarasah-animation 5s infinite;
 }
 
-#content-welcome #img-anilkarasah {
+#container-welcome #img-anilkarasah {
   height: 85vh;
   top: 0;
   z-index: 1;
 }
 
-#content-welcome #welcome-text {
+#container-welcome #welcome-text {
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -172,20 +174,20 @@ content h1 {
 }
 
 /* ABOUT ME SECTION */
-#content-about p {
+#container-about p {
   text-align: center;
   font-weight: 600;
   font-size: 1.2rem;
   line-height: 1.6rem;
 }
 
-#content-about #focus,
-#content-about a {
+#container-about #focus,
+#container-about a {
   font-weight: 900;
 }
 
 /* TECH-STACK SECTION */
-#content-tech {
+#container-tech {
   color: var(--color-secondary);
   width: 100%;
 }
@@ -230,7 +232,7 @@ ul#techstack-framework li {
 }
 
 /* PROJECTS SECTION */
-#content-projects {
+#container-projects {
   height: 60rem;
 }
 
@@ -326,23 +328,23 @@ footer a.social {
     text-align: center;
   }
 
-  content {
+  container {
     min-height: 40rem;
   }
 
-  #content-about .container {
+  #container-about .container {
     gap: 1rem;
   }
 
-  #content-about p {
+  #container-about p {
     text-align: justify;
   }
 
-  #content-tech {
+  #container-tech {
     height: 50rem;
   }
 
-  #content-tech h1 {
+  #container-tech h1 {
     padding: 0 0 1rem 0;
   }
 
@@ -359,7 +361,7 @@ footer a.social {
     border-right: 0;
   }
 
-  #content-projects {
+  #container-projects {
     height: calc(20rem + 9 * 12rem);
   }
 
@@ -379,7 +381,7 @@ footer a.social {
 }
 
 @media (max-width: 768px) {
-  #content-welcome #welcome-text {
+  #container-welcome #welcome-text {
     justify-content: center;
     align-items: stretch;
   }
