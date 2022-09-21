@@ -1,0 +1,19 @@
+---
+import '../styles/global.css'
+const { title, description, titleLink, titleLinkAltText } = Astro.props
+---
+
+<article class="flex flex-column">
+  <a
+    href={titleLink}
+    class="animate card-title"
+    target="_blank"
+    rel="noopener"
+    title={titleLinkAltText}
+  >
+    {title}
+  </a>
+  <p>
+    {description}
+  </p>
+</article>

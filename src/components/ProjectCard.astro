@@ -1,0 +1,19 @@
+---
+import '../styles/global.css'
+const { frontmatter } = Astro.props.project
+---
+
+<article class="flex flex-column">
+  <a
+    href={frontmatter.titleLink}
+    class="animate card-title"
+    target="_blank"
+    rel="noopener"
+    title={frontmatter.titleLinkAltText}
+  >
+    {frontmatter.title}
+  </a>
+  <p>
+    {frontmatter.description}
+  </p>
+</article>
