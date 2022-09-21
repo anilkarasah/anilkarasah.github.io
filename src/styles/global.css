@@ -320,6 +320,25 @@ footer a.social {
   color: var(--color-primary);
 }
 
+footer #copyright {
+  height: 2rem;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: baseline;
+}
+
+footer #footer--astro-logo {
+  height: 1.5rem;
+}
+
+footer #footer--astro-logo > img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 830px) {
   #welcome-text {
@@ -374,7 +393,7 @@ footer a.social {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 440px) {
   #container-welcome #welcome-text {
     justify-content: center;
     align-items: stretch;
@@ -383,6 +402,20 @@ footer a.social {
   #img-anilkarasah {
     position: absolute;
     height: 80rem;
+  }
+
+  footer {
+    height: 7rem;
+  }
+
+  footer > .container {
+    flex-wrap: wrap;
+  }
+
+  #copyright {
+    justify-content: center;
+    flex-basis: 100%;
+    order: 3;
   }
 }
 
