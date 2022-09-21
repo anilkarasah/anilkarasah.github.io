@@ -16,6 +16,7 @@
     />
   </head>
   <body>
+    <a href="#container-welcome" class="secret-skip-link">Skip to content</a>
     <!-- HEADER -->
     <header>
       <a href="#" class="animate">Anıl Karaşah</a>
@@ -24,6 +25,9 @@
     <!-- WELCOME SECTION -->
     <main>
       <container id="container-welcome">
+        <a href="#container-about" class="secret-skip-link"
+          >Skip to About section</a
+        >
         <div class="container" id="welcome-text">
           <div id="introduce">
             <h1>Hi, I am</h1>
@@ -38,6 +42,9 @@
       </container>
 
       <container id="container-about">
+        <a href="#container-tech" class="secret-skip-link"
+          >Skip to Tech-Stack section</a
+        >
         <div class="container flex flex-column flex-gap">
           <h1 tabindex="0">About Me</h1>
           <p>
@@ -51,13 +58,24 @@
             myself about it everyday.
           </p>
           <p>
-            I am currently in <span id="focus">WEBLAB</span> which is YTU
-            Skylab's Web Development Team.
+            I am currently in <span id="focus">WEBLAB</span> which is
+            <a
+              href="https://yildizskylab.com/"
+              target="_blank"
+              rel="noopener"
+              title="YTU Skylab Website"
+            >
+              YTU Skylab
+              <i class="fa-solid fa-up-right-from-square"></i> </a
+            >'s Web Development Team.
           </p>
         </div>
       </container>
 
       <container id="container-tech">
+        <a href="#container-projects" class="secret-skip-link"
+          >Skip to Projects section</a
+        >
         <div class="container flex flex-column flex-gap">
           <h1 tabindex="0">Tech-Stack</h1>
 
@@ -85,127 +103,154 @@
 
       <!-- PROJECTS SECTION -->
       <container id="container-projects">
+        <a href="#footer" class="secret-skip-link">Skip to footer</a>
         <div class="container flex flex-column flex-gap">
           <h1 tabindex="0">My Projects</h1>
           <div class="flex flex-row" id="card-project">
             <article class="flex flex-column">
               <a
                 href="https://github.com/anilkarasah/BugTrackerSystem"
-                class="animate"
+                class="animate card-title"
                 target="_blank"
                 rel="noopener"
               >
-                Bug Tracker System (WIP)
+                Bug Tracker System
               </a>
               <p>
-                Bug Tracker System is a common tool which is used to keep track
-                of bugs of projects. I have created a very basic REST API using
-                .NET Core and PostgreSQL. I am now working on its Front-End
-                Application using Angular.
+                Bug Tracker System is a tool for helping businesses keep track
+                of bugs of their projects. I have created a RESTful API using
+                .NET Core 6, database with PostgreSQL and front-end application
+                with Angular. You can visit
+                <a
+                  href="https://bugtrackersystem.anilkarasah.me"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  this link
+                  <i class="fa-solid fa-up-right-from-square"></i>
+                </a>
+                to inspect the project. (currently not fully operating though)
               </p>
             </article>
 
             <article class="flex flex-column">
               <a
                 href="https://github.com/anilkarasah/NerdleClone"
-                class="animate"
+                class="animate card-title"
                 target="_blank"
                 rel="noopener"
               >
                 Nerdle Clone
               </a>
               <p>
-                Nerdle Game is a different approach of Wordle. I wrote this game
-                in Java for my Object-Oriented Programming lecture.
+                <a href="https://nerdlegame.com/" target="_blank" rel="noopener"
+                  >Nerdle Game <i class="fa-solid fa-up-right-from-square"></i
+                ></a>
+                is a puzzle game and a different approach of Wordle. It
+                generates a random basic mathematical equation and you have 6
+                chances to find the correct equation. I wrote this game in Java
+                with GUI for my <i>Object-Oriented Programming</i> lecture.
               </p>
             </article>
 
             <article class="flex flex-column">
               <a
                 href="https://github.com/anilkarasah/ExpenseManagementSystem"
-                class="animate"
+                class="animate card-title"
                 target="_blank"
                 rel="noopener"
               >
                 Expense Management System
               </a>
               <p>
-                This is an API of a Wallet app which you can control your
-                budget. It was for my System Analysis and Design lecture.
+                This is an API of a Wallet app which you can control your budget
+                with what you have spent the most until now. It was for my
+                <i>System Analysis and Design</i> lecture.
               </p>
             </article>
 
             <article class="flex flex-column">
               <a
                 href="https://github.com/anilkarasah/DOSP"
-                class="animate"
+                class="animate card-title"
                 target="_blank"
                 rel="noopener"
               >
                 DOSP
               </a>
               <p>
-                This was my first Back-End project. I used .NET and MSSQL with
-                Razor Webpages. DOSP is a very simple project and it may contain
-                a lot of bugs in it.
+                DOSP (Dijital Oyun Satış Platformu) is like the platform
+                <a
+                  href="https://store.steampowered.com/"
+                  target="_blank"
+                  rel="noopener"
+                  >Steam <i class="fa-solid fa-up-right-from-square"></i
+                ></a>
+                which you can buy videogames and view the games you have
+                purchased in your library. This was my first Full-Stack project.
+                I used .NET MVC and MSSQL.
               </p>
             </article>
 
             <article class="flex flex-column">
               <a
                 href="https://github.com/anilkarasah/Nonogram"
-                class="animate"
+                class="animate card-title"
                 target="_blank"
                 rel="noopener"
               >
                 Nonogram Puzzle
               </a>
               <p>
-                I used C language to create this puzzle game which you play on
-                terminal screen.
+                Nonogram Puzzle is a very old Japan puzzle game. It shows the
+                adjacent blocks every row and column and you have to use these
+                informations to solve the puzzle. I used C language to create
+                this puzzle game which you play on terminal screen.
               </p>
             </article>
 
             <article class="flex flex-column">
               <a
                 href="https://github.com/anilkarasah/AnilKarasah/tree/main/KizmaBirader"
-                class="animate"
+                class="animate card-title"
                 target="_blank"
                 rel="noopener"
               >
                 Ludo
               </a>
               <p>
-                This was my first legit software project which I have done for
-                my Introduction to Computer Science lecture. So, you might find
-                a lot of bugs that I was not able to catch.
+                Ludo is a 2 to 4 players board game. Your goal is to make all 4
+                of your pawns to the finish. I used C language to create this
+                game for my <i>Introduction to Computer Science</i> class.
               </p>
             </article>
 
             <article class="flex flex-column">
               <a
                 href="https://github.com/anilkarasah/AnilKarasah/tree/main/LinkedListDatabase"
-                class="animate"
+                class="animate card-title"
                 target="_blank"
                 rel="noopener"
               >
-                My Database
+                Linked List Database
               </a>
               <p>
-                I have done this project for my Structural Programming lecture.
-                With this project, I was able to get deeper into structs, data
-                structures and file operations.
+                This a CLI for operating a class and student environment. I have
+                done this project for my
+                <i>Structural Programming</i> lecture. With this project, I was
+                able to get deeper into structs, data structures and file
+                operations.
               </p>
             </article>
 
             <article class="flex flex-column">
               <a
                 href="https://github.com/anilkarasah/AnilKarasah/tree/main/NumericalAnalysisCalculator"
-                class="animate"
+                class="animate card-title"
                 target="_blank"
                 rel="noopener"
               >
-                Numerical Analysis
+                Numerical Analysis Calculator
               </a>
               <p>
                 I created a calculator which uses almost all of the methods I've
@@ -216,7 +261,7 @@
             <article class="flex flex-column">
               <a
                 href="https://github.com/anilkarasah/CodingChallenges"
-                class="animate"
+                class="animate card-title"
                 target="_blank"
                 rel="noopener"
               >
@@ -234,7 +279,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
+    <footer id="footer">
       <div class="container">
         <a
           href="mailto:anilkarasah+contact@hotmail.com"

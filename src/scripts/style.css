@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 :root {
   --color-primary: #eee;
   --color-secondary: #333;
   --color-accent: #e6d38e;
-  --font-family: 'Poppins', sans-serif;
+  --font-family-poppins: 'Poppins', sans-serif;
+  --font-weight-bold: 600;
+  --font-family-inter: 'Inter', sans-serif;
+  --font-weight-regular: 400;
 }
 
 /* INITIAL STYLES */
@@ -24,7 +28,8 @@ html {
 }
 
 h1 {
-  font-weight: 900;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-poppins);
   line-height: 4rem;
   font-size: 2.5rem;
   display: inline;
@@ -32,7 +37,8 @@ h1 {
 }
 
 h2 {
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-poppins);
   line-height: 2rem;
   font-size: 1.5rem;
   display: inline;
@@ -54,9 +60,30 @@ body {
   color: var(--color-secondary);
   font-size: 1rem;
   line-height: 1.5rem;
-  font-family: var(--font-family);
-  font-weight: 300;
+  font-family: var(--font-family-inter);
+  font-weight: var(--font-weight-regular);
   height: max-content;
+}
+
+.secret-skip-link {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-weight-bold);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: transform 100ms ease-in-out;
+  z-index: 999;
+}
+
+.secret-skip-link:focus {
+  transform: translateY(0);
 }
 
 /* TEXT CLASSES */
@@ -70,7 +97,6 @@ body {
 .animate:hover,
 .animate:focus {
   transform: translateY(-0.2rem);
-  text-shadow: #0005 0 4px 20px;
   text-decoration: underline;
 }
 
@@ -99,7 +125,7 @@ header {
 
 header a {
   color: var(--color-primary);
-  font-weight: 300;
+  /* font-weight: var(--font-weight-regular); */
   line-height: 4rem;
   cursor: pointer;
   font-size: 1.2rem;
@@ -176,7 +202,6 @@ container h1 {
 /* ABOUT ME SECTION */
 #container-about p {
   text-align: center;
-  font-weight: 600;
   font-size: 1.2rem;
   line-height: 1.6rem;
 }
@@ -254,7 +279,11 @@ ul#techstack-framework li {
   gap: 1rem;
 }
 
-#card-project a {
+#card-project a:not(.card-title)[target^='_blank'] {
+  font-weight: 600;
+}
+
+#card-project a.card-title {
   font-weight: 600;
   font-size: 1.2rem;
   line-height: 2rem;
@@ -264,7 +293,7 @@ ul#techstack-framework li {
 #card-project p {
   height: 100%;
   font-size: 1rem;
-  line-height: 1.2rem;
+  line-height: 1.4rem;
   text-align: justify;
   overflow-y: auto;
 }
