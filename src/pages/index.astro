@@ -1,126 +1,17 @@
 ---
-// Component Imports
-import MainHead from '../components/MainHead.astro'
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
-import ProjectCard from '../components/ProjectCard.astro'
-
-// Data Fetching: List all Markdown posts in the repo.
-const projects = (await Astro.glob('./projects/*.md')).sort(
-  (a, b) => a.frontmatter.index - b.frontmatter.index
-)
-const focusedProject = projects[0]
-
-const programmingLanguages: string[] = [
-  'C',
-  'C#',
-  'Java',
-  'Javascript',
-  'HTML/CSS'
-]
-const frameworks: string[] = [
-  '.NET Core',
-  'SQL',
-  'Node.js',
-  'MongoDB',
-  'Docker',
-  'Angular',
-  'Astro'
-]
+import BaseLayout from '../layouts/BaseLayout.astro'
+import WelcomeSection from '../components/sections/WelcomeSection.astro'
+import AboutSection from '../components/sections/AboutSection.astro'
+import TechSection from '../components/sections/TechSection.astro'
+import ProjectsSection from '../components/sections/ProjectsSection.astro'
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <MainHead title="Hi, I am Anıl Karaşah!" />
-  </head>
-  <body>
-    <a href="#container-welcome" class="secret-skip-link">Skip to content</a>
-    <!-- HEADER -->
-    <Header />
+<BaseLayout contentId="#container-welcome">
+  <WelcomeSection />
 
-    <!-- WELCOME SECTION -->
-    <main>
-      <container id="container-welcome">
-        <a href="#container-about" class="secret-skip-link"
-          >Skip to About section</a
-        >
-        <div class="container" id="welcome-text">
-          <div id="introduce">
-            <h1>Hi, I am</h1>
-            <h1 id="title-anilkarasah" tabindex="0">Anıl Karaşah</h1>
-          </div>
-          <img
-            id="img-anilkarasah"
-            src="./assets/anilkarasah.jpeg"
-            alt="Picture of Anıl Karaşah"
-          />
-        </div>
-      </container>
+  <AboutSection />
 
-      <container id="container-about">
-        <a href="#container-tech" class="secret-skip-link"
-          >Skip to Tech-Stack section</a
-        >
-        <div class="container flex flex-column flex-gap">
-          <h1 tabindex="0">About Me</h1>
-          <p>
-            My full name is
-            <span id="focus">Mehmet Anıl Karaşah</span>. I am studying
-            <span id="focus">Computer Engineering</span> at Yıldız Technical University.
-            I have come to a serious point today in my coding journey, which I first
-            started by learning HTML when I was 11 years old. I am currently focused
-            on
-            <span id="focus">Back-End technologies</span> and try to improve myself
-            about it everyday.
-          </p>
-          <p>
-            I am currently in <span id="focus">WEBLAB</span> which is
-            <a
-              href="https://yildizskylab.com/"
-              target="_blank"
-              rel="noopener"
-              title="YTU Skylab Website"
-            >
-              YTU Skylab
-              <i class="fa-solid fa-up-right-from-square"></i>
-            </a>'s Web Development Team.
-          </p>
-        </div>
-      </container>
+  <TechSection />
 
-      <container id="container-tech">
-        <a href="#container-projects" class="secret-skip-link"
-          >Skip to Projects section</a
-        >
-        <div class="container flex flex-column flex-gap">
-          <h1 tabindex="0">Tech-Stack</h1>
-
-          <h2>Programming Languages</h2>
-          <ul class="list-techstack text--bold" id="techstack-main">
-            {programmingLanguages.map((language) => <li>{language}</li>)}
-          </ul>
-
-          <h2>Frameworks and other</h2>
-          <ul class="list-techstack text--bold" id="techstack-framework">
-            {frameworks.map((framework) => <li>{framework}</li>)}
-          </ul>
-        </div>
-      </container>
-
-      <!-- PROJECTS SECTION -->
-      <container id="container-projects">
-        <a href="#footer" class="secret-skip-link">Skip to footer</a>
-        <div class="container flex flex-column flex-gap">
-          <h1 tabindex="0">My Projects</h1>
-          <div class="flex flex-row" id="card-project">
-            {projects.map((project) => <ProjectCard project={project} />)}
-          </div>
-        </div>
-      </container>
-    </main>
-
-    <!-- FOOTER -->
-    <Footer />
-  </body>
-</html>
+  <ProjectsSection />
+</BaseLayout>

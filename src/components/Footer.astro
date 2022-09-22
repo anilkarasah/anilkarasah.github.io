@@ -18,7 +18,7 @@ import astroLogo from '/astro-logo.png'
         target="_blank"
         rel="noopener"
         id="footer--astro-logo"
-        ><img src={astroLogo} alt="Astro Logo" title="Astro" />
+        ><img src={astroLogo} alt="Astro Logo" title="Astro Official Website" />
       </a>
     </div>
     <div id="sociallinks">
@@ -43,3 +43,69 @@ import astroLogo from '/astro-logo.png'
     </div>
   </div>
 </footer>
+
+<style>
+  footer {
+    padding: 1.5rem;
+    height: 5rem;
+    width: 100%;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+  }
+
+  footer > .container {
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  footer a#email {
+    color: var(--color-primary);
+    font-weight: 300;
+    line-height: 2rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  footer a.social {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--color-primary);
+  }
+
+  footer #copyright {
+    height: 2rem;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+    align-items: center;
+    justify-content: baseline;
+  }
+
+  footer #footer--astro-logo {
+    height: 1.5rem;
+  }
+
+  footer #footer--astro-logo > img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  @media (max-width: 470px) {
+    footer {
+      height: 7rem;
+    }
+
+    footer > .container {
+      flex-wrap: wrap;
+    }
+
+    #copyright {
+      justify-content: center;
+      flex-basis: 100%;
+      order: 3;
+    }
+  }
+</style>

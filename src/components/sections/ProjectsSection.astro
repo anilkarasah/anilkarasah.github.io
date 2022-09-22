@@ -1,0 +1,41 @@
+---
+import ProjectCard from '../ProjectCard.astro'
+
+const projects = (await Astro.glob('../../pages/projects/*.md')).sort(
+  (a, b) => a.frontmatter.index - b.frontmatter.index
+)
+const focusedProject = projects[0]
+---
+
+<container>
+  <div class="container flex flex-column flex-gap">
+    <h1 tabindex="0">My Projects</h1>
+    <div class="flex flex-row" id="card-project">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </div>
+</container>
+
+<style>
+  container {
+    height: 60rem;
+  }
+
+  #card-project {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 500px) {
+    container {
+      height: calc(20rem + 9 * 12rem);
+    }
+
+    #card-project {
+      flex-direction: column;
+    }
+  }
+</style>

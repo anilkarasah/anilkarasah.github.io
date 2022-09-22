@@ -1,0 +1,94 @@
+---
+import AnilKarasahPhoto from '/assets/anilkarasah.jpeg'
+---
+
+<container>
+  <div class="container welcome-text">
+    <div id="introduce">
+      <h1>Hi, I am</h1>
+      <h1 id="title-anilkarasah" tabindex="0">Anıl Karaşah</h1>
+    </div>
+    <img
+      id="img-anilkarasah"
+      src={AnilKarasahPhoto}
+      alt="Picture of Anıl Karaşah"
+    />
+  </div>
+</container>
+
+<style>
+  container {
+    display: flex;
+    justify-content: space-between;
+    height: 85vh;
+    font-size: 1.5rem;
+    background: #a7b080;
+    background: linear-gradient(130deg, #fff1bd 0%, #b2b998 100%);
+    color: var(--color-secondary);
+    position: relative;
+  }
+
+  #introduce {
+    z-index: 10;
+  }
+
+  #introduce h1#title-anilkarasah {
+    display: block;
+    animation: anilkarasah-animation 5s infinite;
+  }
+
+  container img {
+    height: 85vh;
+    top: 0;
+    z-index: 1;
+  }
+
+  .welcome-text {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  @media (max-width: 915px) {
+    .welcome-text {
+      width: 100%;
+      left: 0;
+    }
+
+    #introduce {
+      width: 65vw;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 470px) {
+    container {
+      position: relative;
+      height: 85vh;
+    }
+
+    .welcome-text {
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    container img {
+      position: absolute;
+      height: 85vh;
+    }
+  }
+
+  @keyframes anilkarasah-animation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+</style>

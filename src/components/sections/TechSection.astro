@@ -1,0 +1,91 @@
+---
+const programmingLanguages: string[] = [
+  'C',
+  'C#',
+  'Java',
+  'Javascript',
+  'HTML/CSS'
+]
+const frameworks: string[] = [
+  '.NET Core',
+  'SQL',
+  'Node.js',
+  'MongoDB',
+  'Docker',
+  'Angular',
+  'Astro'
+]
+---
+
+<container>
+  <div class="container flex flex-column flex-gap">
+    <h1 tabindex="0">Tech-Stack</h1>
+
+    <h2>Programming Languages</h2>
+    <ul class="list-techstack text--bold" id="techstack-main">
+      {programmingLanguages.map((language) => <li>{language}</li>)}
+    </ul>
+
+    <h2>Frameworks and other</h2>
+    <ul class="list-techstack text--bold" id="techstack-framework">
+      {frameworks.map((framework) => <li>{framework}</li>)}
+    </ul>
+  </div>
+</container>
+
+<style>
+  container {
+    color: var(--color-secondary);
+    width: 100%;
+  }
+
+  ul.list-techstack {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 2.5rem;
+    margin: 1rem 0;
+    box-shadow: #0002 3px 3px 10px 1px;
+  }
+
+  ul.list-techstack li {
+    font-size: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: #ddd;
+  }
+
+  ul.list-techstack li:hover,
+  ul.list-techstack li:focus {
+    background-color: #fff1bd;
+    background: linear-gradient(130deg, #fff1bd 0%, #d6dfb8 100%);
+  }
+
+  ul.list-techstack li:nth-child(2n) {
+    background-color: #e2e2e2;
+  }
+
+  ul#techstack-main li,
+  ul#techstack-framework li {
+    flex-grow: 1;
+  }
+
+  @media (max-width: 500px) {
+    container h1 {
+      padding: 0 0 1rem 0;
+    }
+
+    ul.list-techstack {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+    }
+
+    ul#techstack-main li,
+    ul#techstack-framework li {
+      display: block;
+      width: 100%;
+      border-right: 0;
+    }
+  }
+</style>
