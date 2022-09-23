@@ -18,18 +18,28 @@ import AnilKarasahPhoto from '/assets/anilkarasah.jpeg'
 
 <style>
   container {
+    --text-color: var(--color-primary);
     display: flex;
     justify-content: space-between;
     height: 85vh;
     font-size: 1.5rem;
-    background: #a7b080;
-    background: linear-gradient(130deg, #fff1bd 0%, #b2b998 100%);
-    color: var(--color-secondary);
+    background: var(--color-header-fade-to);
+    background: linear-gradient(
+      180deg,
+      var(--color-header-bg) 0%,
+      var(--color-header-fade-to) 100%
+    );
+    color: var(--text-color);
     position: relative;
   }
 
   #introduce {
     z-index: 10;
+  }
+
+  #introduce h1 {
+    font-family: var(--font-family-inter);
+    font-weight: 600;
   }
 
   #introduce h1#title-anilkarasah {
@@ -67,6 +77,7 @@ import AnilKarasahPhoto from '/assets/anilkarasah.jpeg'
     container {
       position: relative;
       height: 85vh;
+      --text-color: var(--color-secondary);
     }
 
     .welcome-text {
