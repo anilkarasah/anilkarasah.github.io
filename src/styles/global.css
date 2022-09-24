@@ -5,7 +5,7 @@
   --color-secondary: #333;
   --color-accent: #f0e9c9;
   --color-header-bg: #531435;
-  --color-header-fade-to: rgb(3, 11, 34);
+  --color-header-fade-to: #030b22;
   --font-family-inter: 'Inter', sans-serif;
   --font-weight-regular: 400;
   --font-weight-bold: 600;
@@ -51,11 +51,10 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--color-secondary);
-  top: 0;
+  color: #040c25;
 }
 
-a[target^='_blank']:not(.social)::after {
+a[target^='_blank']:not(.social):not(#footer--astro-logo)::after {
   padding: 0 0.2rem;
   content: '\f35d';
   font-family: 'Font Awesome\ 6 Free';
@@ -95,9 +94,8 @@ body {
 
 /* TEXT CLASSES */
 .animate {
-  transition: all 0.2s;
-  text-shadow: none;
-  transform: translateX(0);
+  transition: transform 0.2s;
+  transform: translateY(0);
   cursor: pointer;
 }
 
