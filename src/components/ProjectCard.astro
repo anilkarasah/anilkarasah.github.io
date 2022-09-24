@@ -16,7 +16,11 @@ const { frontmatter, Content } = Astro.props.project
   <Content />
 </article>
 
-<style>
+<style is:global>
+  strong {
+    font-weight: 600;
+  }
+
   article {
     padding: 1rem;
     width: 32%;

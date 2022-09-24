@@ -4,8 +4,8 @@
   --color-primary: #eee;
   --color-secondary: #333;
   --color-accent: #f0e9c9;
-  --color-header-bg: #585848;
-  --color-header-fade-to: #777;
+  --color-header-bg: #531435;
+  --color-header-fade-to: rgb(3, 11, 34);
   --font-family-inter: 'Inter', sans-serif;
   --font-weight-regular: 400;
   --font-weight-bold: 600;
@@ -55,6 +55,12 @@ a {
   top: 0;
 }
 
+a[target^='_blank']:not(.social)::after {
+  padding: 0 0.2rem;
+  content: '\f35d';
+  font-family: 'Font Awesome\ 6 Free';
+}
+
 body {
   padding: 1vw;
   color: var(--color-secondary);
@@ -63,6 +69,7 @@ body {
   font-family: var(--font-family-inter);
   font-weight: var(--font-weight-regular);
   height: max-content;
+  background-color: #fdfdfb;
 }
 
 .secret-skip-link {
