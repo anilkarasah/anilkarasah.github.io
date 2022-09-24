@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css'
-const { frontmatter } = Astro.props.project
+const { frontmatter, Content } = Astro.props.project
 ---
 
 <article class="flex flex-column">
@@ -13,9 +13,7 @@ const { frontmatter } = Astro.props.project
   >
     {frontmatter.title}
   </a>
-  <p>
-    {frontmatter.description}
-  </p>
+  <Content />
 </article>
 
 <style>
@@ -40,7 +38,7 @@ const { frontmatter } = Astro.props.project
     text-align: center;
   }
 
-  p {
+  p.description {
     height: 100%;
     font-size: 1rem;
     line-height: 1.4rem;
