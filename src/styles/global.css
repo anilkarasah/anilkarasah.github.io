@@ -152,6 +152,10 @@ container h1 {
   margin: auto;
 }
 
+.box-shadow {
+  box-shadow: #0001 3px 3px 3px 1px;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 915px) {
   .container {

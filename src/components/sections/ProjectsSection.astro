@@ -4,38 +4,90 @@ import ProjectCard from '../ProjectCard.astro'
 const projects = (await Astro.glob('../../pages/projects/*.md')).sort(
   (a, b) => a.frontmatter.index - b.frontmatter.index
 )
-const focusedProject = projects[0]
+let focusedProject: Number = 0
 ---
 
 <container>
   <div class="container flex flex-column flex-gap">
     <h1 tabindex="0">My Projects</h1>
-    <div class="flex flex-row" id="card-project">
-      {projects.map((project) => <ProjectCard project={project} />)}
+    <div class="project-section box-shadow">
+      <ul class="project-list">
+        {
+          projects.map(({ frontmatter }, index) =>
+            index === focusedProject ? (
+              <li id="active">{frontmatter.title}</li>
+            ) : (
+              <li>{frontmatter.title}</li>
+            )
+          )
+        }
+      </ul>
+
+      <div class="project-content">
+        {
+          projects.map(
+            ({ Content }, index) => index === focusedProject && <Content />
+          )
+        }
+      </div>
     </div>
   </div>
 </container>
 
 <style>
-  container {
-    height: 60rem;
+  .project-section {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 3fr 7fr;
   }
 
-  #card-project {
+  .project-list {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 0.5rem;
+    flex-direction: column;
+  }
+
+  #active {
+    background-color: #d0d3f3;
+    background: linear-gradient(to bottom right, #f1bbcf 0%, #bbcff1 100%);
+  }
+
+  .project-list li {
+    background-color: #dadada;
+    text-align: center;
+    height: 3rem;
+    padding: 0 1rem;
+    line-height: 3rem;
+  }
+
+  .project-list li:nth-child(2n) {
+    background-color: #e8e8e8;
+  }
+
+  .project-content {
+    padding: 1rem;
+    background-color: #f3f3f3;
+    text-align: justify;
+    overflow-y: hidden;
+    flex-grow: 3;
   }
 
   @media (max-width: 500px) {
-    container {
-      height: calc(20rem + 9 * 12rem);
+    .project-section {
+      grid-auto-flow: column;
+      grid-template-rows: 3rem max-content;
+      grid-template-columns: auto;
     }
 
-    #card-project {
-      flex-direction: column;
+    .project-list {
+      overflow: auto hidden;
+      flex-direction: row;
+    }
+
+    .project-list li {
+      min-width: 50vw;
+      width: max-content;
+      height: 3rem;
+      scroll-snap-type: mandatory;
     }
   }
 </style>

@@ -19,9 +19,11 @@ import AnilKarasahPhoto from '/assets/anilkarasah.jpeg'
 <style>
   container {
     --text-color: var(--color-primary);
+    --welcome-container-height: 50rem;
+
     display: flex;
     justify-content: space-between;
-    height: 95vh;
+    height: var(--welcome-container-height);
     font-size: 1.5rem;
     background: var(--color-header-bg);
     background: linear-gradient(
@@ -48,7 +50,7 @@ import AnilKarasahPhoto from '/assets/anilkarasah.jpeg'
   }
 
   container img {
-    height: 95vh;
+    height: var(--welcome-container-height);
     top: 0;
     z-index: 1;
   }
@@ -75,8 +77,9 @@ import AnilKarasahPhoto from '/assets/anilkarasah.jpeg'
 
   @media (max-width: 470px) {
     container {
+      --welcome-container-height: 65rem;
+
       position: relative;
-      height: 85vh;
       --text-color: var(--color-secondary);
     }
 
@@ -87,7 +90,6 @@ import AnilKarasahPhoto from '/assets/anilkarasah.jpeg'
 
     container img {
       position: absolute;
-      height: 85vh;
     }
   }
 
