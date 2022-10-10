@@ -1,6 +1,4 @@
 ---
-import ProjectCard from '../ProjectCard.astro'
-
 const projects = (await Astro.glob('../../pages/projects/*.md')).sort(
   (a, b) => a.frontmatter.index - b.frontmatter.index
 )
@@ -11,28 +9,55 @@ let focusedProject: Number = 0
   <div class="container flex flex-column flex-gap">
     <h1 tabindex="0">My Projects</h1>
     <div class="project-section box-shadow">
-      <ul class="project-list">
+      <div class="project-list">
         {
-          projects.map(({ frontmatter }, index) =>
-            index === focusedProject ? (
-              <li id="active">{frontmatter.title}</li>
-            ) : (
-              <li>{frontmatter.title}</li>
-            )
-          )
+          projects.map(({ frontmatter }, index) => (
+            <button data-pid={index}>{frontmatter.title}</button>
+          ))
         }
-      </ul>
+      </div>
 
       <div class="project-content">
-        {
-          projects.map(
-            ({ Content }, index) => index === focusedProject && <Content />
-          )
-        }
+        {projects.map(({ Content }, index) => <Content />)}
       </div>
     </div>
   </div>
 </container>
+
+<script defer>
+  let focusedProject = 0
+
+  const projectButtons = Array.prototype.slice.call(
+    document.querySelectorAll('.project-list>button')
+  )
+
+  projectButtons.forEach((btn) =>
+    btn.addEventListener('click', (event) => showProject(btn.dataset.pid))
+  )
+
+  projectButtons[focusedProject].classList.add('active')
+
+  const projectArticles = Array.prototype.slice.call(
+    document.querySelectorAll('.project-content>p')
+  )
+
+  onlyShowOneArticle(projectArticles, focusedProject)
+
+  function showProject(index) {
+    projectButtons[focusedProject].classList.remove('active')
+    projectButtons[index].classList.add('active')
+    focusedProject = index
+
+    onlyShowOneArticle(projectArticles, focusedProject)
+  }
+
+  function onlyShowOneArticle(articleList, index) {
+    for (let i = 0; i < articleList.length; i++) {
+      if (i == index) articleList[i].style.display = 'block'
+      else articleList[i].style.display = 'none'
+    }
+  }
+</script>
 
 <style>
   .project-section {
@@ -46,21 +71,22 @@ let focusedProject: Number = 0
     flex-direction: column;
   }
 
-  #active {
-    background-color: #d0d3f3;
-    background: linear-gradient(to bottom right, #f1bbcf 0%, #bbcff1 100%);
-  }
-
-  .project-list li {
+  .project-list button {
     background-color: #dadada;
     text-align: center;
     height: 3rem;
     padding: 0 1rem;
     line-height: 3rem;
+    cursor: pointer;
   }
 
-  .project-list li:nth-child(2n) {
+  .project-list button:nth-child(2n) {
     background-color: #e8e8e8;
+  }
+
+  .active {
+    background: var(--color-header-bg);
+    background: linear-gradient(to bottom right, #f1bbcf 0%, #bbcff1 100%);
   }
 
   .project-content {
@@ -83,7 +109,7 @@ let focusedProject: Number = 0
       flex-direction: row;
     }
 
-    .project-list li {
+    .project-list button {
       min-width: 50vw;
       width: max-content;
       height: 3rem;

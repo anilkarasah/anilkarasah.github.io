@@ -25,11 +25,11 @@ html {
   box-sizing: border-box;
   -webkit-user-select: none;
   user-select: none;
+  font-family: var(--font-family-inter);
 }
 
 h1 {
   font-weight: var(--font-weight-bold);
-  font-family: var(--font-family-poppins);
   line-height: 4rem;
   font-size: 2.5rem;
   display: inline;
@@ -38,7 +38,6 @@ h1 {
 
 h2 {
   font-weight: var(--font-weight-bold);
-  font-family: var(--font-family-poppins);
   line-height: 2rem;
   font-size: 1.5rem;
   display: inline;
@@ -65,7 +64,6 @@ body {
   color: var(--color-secondary);
   font-size: 1rem;
   line-height: 1.5rem;
-  font-family: var(--font-family-inter);
   font-weight: var(--font-weight-regular);
   height: max-content;
   background-color: #fdfdfb;
@@ -75,7 +73,6 @@ body {
   background-color: var(--color-secondary);
   color: var(--color-accent);
   font-size: 1.5rem;
-  font-family: var(--font-family-poppins);
   font-weight: var(--font-weight-bold);
   position: fixed;
   top: 0;
