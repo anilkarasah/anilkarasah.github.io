@@ -8,11 +8,7 @@ import AnilKarasahPhoto from '/assets/anilkarasah.jpeg'
       <h1>Hi, I am</h1>
       <h1 id="title-anilkarasah" tabindex="0">Anıl Karaşah</h1>
     </div>
-    <img
-      id="img-anilkarasah"
-      src={AnilKarasahPhoto}
-      alt="Picture of Anıl Karaşah"
-    />
+    <img src={AnilKarasahPhoto} alt="Picture of Anıl Karaşah" />
   </div>
 </container>
 
@@ -50,6 +46,9 @@ import AnilKarasahPhoto from '/assets/anilkarasah.jpeg'
 
   container img {
     height: var(--welcome-container-height);
+    aspect-ratio: 1 / 1.618;
+    object-fit: cover;
+    object-position: center center;
     top: 0;
     z-index: 1;
   }
@@ -62,7 +61,7 @@ import AnilKarasahPhoto from '/assets/anilkarasah.jpeg'
     justify-content: space-around;
   }
 
-  @media (max-width: 915px) {
+  /* @media (max-width: 920px) {
     .welcome-text {
       width: 100%;
       left: 0;
@@ -72,9 +71,9 @@ import AnilKarasahPhoto from '/assets/anilkarasah.jpeg'
       width: 65vw;
       text-align: center;
     }
-  }
+  } */
 
-  @media (max-width: 470px) {
+  @media (max-width: 600px) {
     container {
       --welcome-container-height: 65rem;
 
@@ -85,6 +84,7 @@ import AnilKarasahPhoto from '/assets/anilkarasah.jpeg'
     .welcome-text {
       justify-content: center;
       align-items: stretch;
+      justify-self: flex-end;
     }
 
     container img {

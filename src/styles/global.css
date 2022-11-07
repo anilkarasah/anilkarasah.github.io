@@ -2,10 +2,12 @@
 
 :root {
   --color-primary: #eee;
-  --color-secondary: #333;
-  --color-accent: #f0e9c9;
-  --color-header-bg: #531435;
-  --color-header-fade-to: #030b22;
+  --color-secondary: #1d102b;
+  --color-accent: dodgerblue;
+  --color-header-bg: #61c2bc;
+  --color-header-fade-to: indigo;
+  --color-hover-bg: #61c2bc33;
+  --color-hover-fade-to: #4b008266;
   --font-family-inter: 'Inter', sans-serif;
   --font-weight-regular: 400;
   --font-weight-bold: 600;

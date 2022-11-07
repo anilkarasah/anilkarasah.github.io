@@ -79,6 +79,7 @@ let focusedProject: Number = 0
     height: 3rem;
     padding: 0 1rem;
     line-height: 3rem;
+    font-size: 1rem;
     cursor: pointer;
   }
 
@@ -88,7 +89,11 @@ let focusedProject: Number = 0
 
   .active {
     background: var(--color-header-bg);
-    background: linear-gradient(to bottom right, #f1bbcf 0%, #bbcff1 100%);
+    background: linear-gradient(
+      to bottom right,
+      var(--color-hover-bg) 0%,
+      var(--color-hover-fade-to) 100%
+    );
   }
 
   .project-content {
@@ -115,7 +120,6 @@ let focusedProject: Number = 0
       min-width: 50vw;
       width: max-content;
       height: 3rem;
-      scroll-snap-type: mandatory;
     }
   }
 </style>
