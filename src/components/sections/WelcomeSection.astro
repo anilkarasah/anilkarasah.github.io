@@ -33,6 +33,8 @@ import AnilKarasahPhoto from '/anilkarasah.jpg'
 
   #introduce {
     z-index: 10;
+    display: flex;
+    flex-direction: column;
   }
 
   #introduce h1 {
@@ -61,34 +63,41 @@ import AnilKarasahPhoto from '/anilkarasah.jpg'
     justify-content: space-around;
   }
 
-  /* @media (max-width: 920px) {
-    .welcome-text {
-      width: 100%;
-      left: 0;
-    }
-
-    #introduce {
-      width: 65vw;
-      text-align: center;
-    }
-  } */
-
   @media (max-width: 600px) {
     container {
       --welcome-container-height: 65rem;
 
       position: relative;
       --text-color: var(--color-secondary);
+      padding: 0;
+    }
+
+    #introduce {
+      width: 95vw;
+      position: relative;
+      color: white;
+      background: rgb(30, 129, 158);
+      background: linear-gradient(
+        0deg,
+        rgba(30, 129, 158, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    #introduce h1 {
+      line-height: 6rem;
     }
 
     .welcome-text {
       justify-content: center;
-      align-items: stretch;
-      justify-self: flex-end;
+      align-items: flex-end;
+      width: 100%;
+      height: 100%;
     }
 
     container img {
       position: absolute;
+      width: 95vw;
     }
   }
 
