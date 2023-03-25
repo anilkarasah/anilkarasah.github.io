@@ -19,15 +19,18 @@ const frameworks: string[] = [
 
 <container>
   <div class="container flex flex-column flex-gap">
-    <h1 tabindex="0">Tech-Stack</h1>
+    <h1 tabindex="0" class="scroll-hidden">Tech-Stack</h1>
 
-    <h2>Programming Languages</h2>
-    <ul class="list-techstack text--bold" id="techstack-main">
+    <h2 class="scroll-hidden">Programming Languages</h2>
+    <ul class="list-techstack text--bold scroll-hidden" id="techstack-main">
       {programmingLanguages.map((language) => <li>{language}</li>)}
     </ul>
 
-    <h2>Frameworks and other</h2>
-    <ul class="list-techstack text--bold" id="techstack-framework">
+    <h2 class="scroll-hidden">Frameworks and other</h2>
+    <ul
+      class="list-techstack text--bold scroll-hidden"
+      id="techstack-framework"
+    >
       {frameworks.map((framework) => <li>{framework}</li>)}
     </ul>
   </div>

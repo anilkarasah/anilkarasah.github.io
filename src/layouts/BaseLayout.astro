@@ -20,5 +20,18 @@ const { pageTitle } = Astro.props as LayoutProps
     </main>
 
     <Footer />
+
+    <script type="text/javascript" defer>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          console.log(entry)
+
+          entry.target.classList.toggle('scroll-show', entry.isIntersecting)
+        })
+      })
+
+      const hiddenElements = document.querySelectorAll('.scroll-hidden')
+      hiddenElements.forEach((el) => observer.observe(el))
+    </script>
   </body>
 </html>

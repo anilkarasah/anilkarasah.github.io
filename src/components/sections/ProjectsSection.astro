@@ -7,8 +7,8 @@ let focusedProject: Number = 0
 
 <container>
   <div class="container flex flex-column flex-gap">
-    <h1 tabindex="0">My Projects</h1>
-    <div class="project-section box-shadow">
+    <h1 tabindex="0" class="scroll-hidden">My Projects</h1>
+    <div class="project-section box-shadow scroll-hidden">
       <div class="project-list">
         {
           projects.map(({ frontmatter }, index) => (
@@ -24,7 +24,7 @@ let focusedProject: Number = 0
   </div>
 </container>
 
-<script defer>
+<script type="text/javascript" defer>
   let focusedProject = 0
 
   const projectButtons = Array.prototype.slice.call(
