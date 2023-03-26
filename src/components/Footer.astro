@@ -2,7 +2,7 @@
 import astroLogo from '/astro-logo.png'
 ---
 
-<footer id="footer">
+<footer>
   <div class="container scroll-hidden">
     <a
       href="mailto:anilkarasah+contact@hotmail.com"
@@ -12,15 +12,7 @@ import astroLogo from '/astro-logo.png'
     >
       Send me an email
     </a>
-    <div id="copyright">
-      &copy; 2022 - Anıl Karaşah | Powered by <a
-        href="https://astro.build/"
-        target="_blank"
-        rel="noopener"
-        id="footer--astro-logo"
-        ><img src={astroLogo} alt="Astro Logo" title="Astro Official Website" />
-      </a>
-    </div>
+    <p id="copyright">&copy; {new Date().getFullYear()} - Anıl Karaşah</p>
     <div id="sociallinks">
       <a
         href="https://www.linkedin.com/in/anilkarasah"
@@ -88,7 +80,7 @@ import astroLogo from '/astro-logo.png'
     transform: translateY(-0.2rem);
   }
 
-  #copyright {
+  p#copyright {
     height: 2rem;
     line-height: 2rem;
     display: flex;
@@ -123,7 +115,7 @@ import astroLogo from '/astro-logo.png'
       flex-wrap: wrap;
     }
 
-    #copyright {
+    p#copyright {
       justify-content: center;
       flex-basis: 100%;
       order: 3;

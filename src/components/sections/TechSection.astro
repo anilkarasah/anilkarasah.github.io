@@ -1,19 +1,14 @@
 ---
-const programmingLanguages: string[] = [
-  'C',
-  'C#',
-  'Java',
-  'Javascript',
-  'HTML/CSS'
-]
-const frameworks: string[] = [
+const languages: string[] = ['C', 'C#', 'Java', 'Javascript', 'HTML/CSS', 'SQL']
+const technologies: string[] = [
   '.NET Core',
-  'SQL',
+  'PostgreSQL',
   'Node.js',
   'MongoDB',
   'Docker',
   'Angular',
-  'Astro'
+  'Astro',
+  'Linux'
 ]
 ---
 
@@ -22,16 +17,25 @@ const frameworks: string[] = [
     <h1 tabindex="0" class="scroll-hidden">Tech-Stack</h1>
 
     <h2 class="scroll-hidden">Programming Languages</h2>
-    <ul class="list-techstack text--bold scroll-hidden" id="techstack-main">
-      {programmingLanguages.map((language) => <li>{language}</li>)}
+    <ul class="text--bold">
+      {
+        languages.map((language, index) => (
+          <li class="scroll-hidden" style={`--order:${index};`}>
+            {language}
+          </li>
+        ))
+      }
     </ul>
 
-    <h2 class="scroll-hidden">Frameworks and other</h2>
-    <ul
-      class="list-techstack text--bold scroll-hidden"
-      id="techstack-framework"
-    >
-      {frameworks.map((framework) => <li>{framework}</li>)}
+    <h2 class="scroll-hidden">Technologies</h2>
+    <ul class="text--bold">
+      {
+        technologies.map((technology, index) => (
+          <li class="scroll-hidden" style={`--order:${index};`}>
+            {technology}
+          </li>
+        ))
+      }
     </ul>
   </div>
 </container>
@@ -42,24 +46,25 @@ const frameworks: string[] = [
     width: 100%;
   }
 
-  ul.list-techstack {
+  ul {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 2.5rem;
     margin: 1rem 0;
-    box-shadow: #0002 3px 3px 10px 1px;
   }
 
-  ul.list-techstack li {
+  li {
     font-size: 1rem;
     padding: 0.5rem;
     text-align: center;
     background-color: #ddd;
+    box-shadow: #0002 3px 3px 10px 1px;
+    flex-grow: 1;
   }
 
-  ul.list-techstack li:hover,
-  ul.list-techstack li:focus {
+  li:hover,
+  li:focus {
     background-color: #d0d3f3;
     background: linear-gradient(
       to bottom right,
@@ -68,13 +73,8 @@ const frameworks: string[] = [
     );
   }
 
-  ul.list-techstack li:nth-child(2n) {
+  li:nth-child(2n) {
     background-color: #e2e2e2;
-  }
-
-  ul#techstack-main li,
-  ul#techstack-framework li {
-    flex-grow: 1;
   }
 
   @media (max-width: 500px) {
@@ -82,17 +82,22 @@ const frameworks: string[] = [
       padding: 0 0 1rem 0;
     }
 
-    ul.list-techstack {
+    ul {
       width: 100%;
       height: auto;
       flex-direction: column;
     }
 
-    ul#techstack-main li,
-    ul#techstack-framework li {
+    li {
       display: block;
       width: 100%;
       border-right: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    li.scroll-hidden {
+      transition-delay: calc(var(--order) * 100ms);
     }
   }
 </style>
