@@ -17,25 +17,13 @@ const technologies: string[] = [
     <h1 tabindex="0" class="scroll-hidden">Tech-Stack</h1>
 
     <h2 class="scroll-hidden">Programming Languages</h2>
-    <ul class="text--bold">
-      {
-        languages.map((language, index) => (
-          <li class="scroll-hidden" style={`--order:${index};`}>
-            {language}
-          </li>
-        ))
-      }
+    <ul class="text--bold scroll-hidden">
+      {languages.map((language) => <li>{language}</li>)}
     </ul>
 
     <h2 class="scroll-hidden">Technologies</h2>
-    <ul class="text--bold">
-      {
-        technologies.map((technology, index) => (
-          <li class="scroll-hidden" style={`--order:${index};`}>
-            {technology}
-          </li>
-        ))
-      }
+    <ul class="text--bold scroll-hidden">
+      {technologies.map((technology) => <li>{technology}</li>)}
     </ul>
   </div>
 </container>
@@ -92,12 +80,6 @@ const technologies: string[] = [
       display: block;
       width: 100%;
       border-right: 0;
-    }
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    li.scroll-hidden {
-      transition-delay: calc(var(--order) * 100ms);
     }
   }
 </style>
