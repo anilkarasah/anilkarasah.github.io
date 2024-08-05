@@ -51,14 +51,8 @@ ul {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #040c25;
-}
-
-a[target^='_blank']:not(.social):not(#footer--astro-logo)::after {
-  padding: 0 0.2rem;
-  content: '\f35d';
-  font-family: 'Font Awesome\ 6 Free';
 }
 
 body {
@@ -99,12 +93,15 @@ body {
 .flex {
   display: flex;
 }
+
 .flex-row {
   flex-direction: row;
 }
+
 .flex-column {
   flex-direction: column;
 }
+
 .flex-gap {
   gap: 1.5rem;
 }
@@ -138,7 +135,7 @@ container h1 {
 }
 
 .container {
-  width: 50vw;
+  width: 70vw;
   margin: auto;
 }
 
@@ -149,7 +146,7 @@ container h1 {
 /* MEDIA QUERIES */
 @media (max-width: 915px) {
   .container {
-    width: 80vw;
+    width: 90vw;
     left: 10vw;
   }
 }

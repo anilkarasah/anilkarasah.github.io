@@ -1,85 +1,90 @@
 ---
 const languages: string[] = ['C', 'C#', 'Java', 'Javascript', 'HTML/CSS', 'SQL']
 const technologies: string[] = [
-  '.NET Core',
-  'PostgreSQL',
-  'Node.js',
-  'MongoDB',
-  'Docker',
-  'Angular',
-  'Astro',
-  'Linux'
+    '.NET Core',
+    'PostgreSQL',
+    'Linux',
+    'Elasticsearch',
+    'Redis',
+    'Git',
+    'Node.js',
+    'MongoDB',
+    'Docker',
+    'Angular',
+    'Astro'
 ]
 ---
 
 <container>
-  <div class="container flex flex-column flex-gap">
-    <h1 tabindex="0" class="scroll-hidden">Tech-Stack</h1>
+    <div class="container flex flex-column flex-gap">
+        <h1 tabindex="0" class="scroll-hidden">Tech-Stack</h1>
 
-    <h2 class="scroll-hidden">Programming Languages</h2>
-    <ul class="text--bold scroll-hidden">
-      {languages.map((language) => <li>{language}</li>)}
-    </ul>
+        <h2 class="scroll-hidden">Programming</h2>
+        <ul class="text--bold scroll-hidden">
+            {languages.map((language) => <li>{language}</li>)}
+        </ul>
 
-    <h2 class="scroll-hidden">Technologies</h2>
-    <ul class="text--bold scroll-hidden">
-      {technologies.map((technology) => <li>{technology}</li>)}
-    </ul>
-  </div>
+        <h2 class="scroll-hidden">Technologies</h2>
+        <ul class="text--bold scroll-hidden">
+            {technologies.map((technology) => <li>{technology}</li>)}
+        </ul>
+    </div>
 </container>
 
 <style>
-  container {
-    color: var(--color-secondary);
-    width: 100%;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 2.5rem;
-    margin: 1rem 0;
-  }
-
-  li {
-    font-size: 1rem;
-    padding: 0.5rem;
-    text-align: center;
-    background-color: #ddd;
-    box-shadow: #0002 3px 3px 10px 1px;
-    flex-grow: 1;
-  }
-
-  li:hover,
-  li:focus {
-    background-color: #d0d3f3;
-    background: linear-gradient(
-      to bottom right,
-      var(--color-hover-bg) 0%,
-      var(--color-hover-fade-to) 100%
-    );
-  }
-
-  li:nth-child(2n) {
-    background-color: #e2e2e2;
-  }
-
-  @media (max-width: 500px) {
-    container h1 {
-      padding: 0 0 1rem 0;
+    container {
+        color: var(--color-secondary);
+        width: 100%;
     }
 
     ul {
-      width: 100%;
-      height: auto;
-      flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 2.5rem;
+        margin: 1rem 0;
+        flex-wrap: wrap;
     }
 
     li {
-      display: block;
-      width: 100%;
-      border-right: 0;
+        font-size: 1rem;
+        padding: 0.5rem;
+        text-align: center;
+        background-color: #ddd;
+        box-shadow: #0002 3px 3px 10px 1px;
+        min-width: 10rem;
+        flex-grow: 1;
     }
-  }
+
+    li:hover,
+    li:focus {
+        background-color: #d0d3f3;
+        background: linear-gradient(
+            to bottom right,
+            var(--color-hover-bg) 0%,
+            var(--color-hover-fade-to) 100%
+        );
+    }
+
+    li:nth-child(2n) {
+        background-color: #e2e2e2;
+    }
+
+    @media (max-width: 500px) {
+        container h1 {
+            padding: 0 0 1rem 0;
+        }
+
+        ul {
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+        }
+
+        li {
+            display: block;
+            width: 100%;
+            border-right: 0;
+        }
+    }
 </style>

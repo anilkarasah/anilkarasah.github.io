@@ -3,7 +3,7 @@ import MainHead from '../components/MainHead.astro'
 import Footer from '../components/Footer.astro'
 
 export interface LayoutProps {
-  pageTitle?: string
+    pageTitle?: string
 }
 
 const { pageTitle } = Astro.props as LayoutProps
@@ -11,27 +11,30 @@ const { pageTitle } = Astro.props as LayoutProps
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <MainHead title={pageTitle} />
-  </head>
-  <body>
-    <main>
-      <slot />
-    </main>
+    <head>
+        <MainHead title={pageTitle} />
+    </head>
+    <body>
+        <main>
+            <slot />
+        </main>
 
-    <Footer />
+        <Footer />
 
-    <script type="text/javascript" defer>
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          console.log(entry)
+        <script type="text/javascript" defer>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    console.log(entry)
 
-          entry.target.classList.toggle('scroll-show', entry.isIntersecting)
-        })
-      })
+                    entry.target.classList.toggle(
+                        'scroll-show',
+                        entry.isIntersecting
+                    )
+                })
+            })
 
-      const hiddenElements = document.querySelectorAll('.scroll-hidden')
-      hiddenElements.forEach((el) => observer.observe(el))
-    </script>
-  </body>
+            const hiddenElements = document.querySelectorAll('.scroll-hidden')
+            hiddenElements.forEach((el) => observer.observe(el))
+        </script>
+    </body>
 </html>

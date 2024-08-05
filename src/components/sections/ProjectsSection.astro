@@ -1,125 +1,124 @@
 ---
 const projects = (await Astro.glob('../../pages/projects/*.md')).sort(
-  (a, b) => a.frontmatter.index - b.frontmatter.index
+    (a, b) => a.frontmatter.index - b.frontmatter.index
 )
 let focusedProject: Number = 0
 ---
 
 <container>
-  <div class="container flex flex-column flex-gap">
-    <h1 tabindex="0" class="scroll-hidden">My Projects</h1>
-    <div class="project-section box-shadow scroll-hidden">
-      <div class="project-list">
-        {
-          projects.map(({ frontmatter }, index) => (
-            <button data-pid={index}>{frontmatter.title}</button>
-          ))
-        }
-      </div>
+    <div class="container flex flex-column flex-gap">
+        <h1 tabindex="0" class="scroll-hidden">Contributions</h1>
+        <div class="project-section box-shadow scroll-hidden">
+            <div class="project-list">
+                {
+                    projects.map(({ frontmatter }, index) => (
+                        <button data-pid={index}>{frontmatter.title}</button>
+                    ))
+                }
+            </div>
 
-      <div class="project-content">
-        {projects.map(({ Content }) => <Content />)}
-      </div>
+            <div class="project-content">
+                {projects.map(({ Content }) => <Content />)}
+            </div>
+        </div>
     </div>
-  </div>
 </container>
 
 <script type="text/javascript" defer>
-  let focusedProject = 0
+    let focusedProject = 0
 
-  const projectButtons = Array.prototype.slice.call(
-    document.querySelectorAll('.project-list>button')
-  )
+    const projectButtons = Array.prototype.slice.call(
+        document.querySelectorAll('.project-list>button')
+    )
 
-  projectButtons.forEach((btn) =>
-    btn.addEventListener('click', (event) => showProject(btn.dataset.pid))
-  )
+    projectButtons.forEach((btn) =>
+        btn.addEventListener('click', (event) => showProject(btn.dataset.pid))
+    )
 
-  projectButtons[focusedProject].classList.add('active')
+    projectButtons[focusedProject].classList.add('active')
 
-  const projectArticles = Array.prototype.slice.call(
-    document.querySelectorAll('.project-content>p')
-  )
-
-  onlyShowOneArticle(projectArticles, focusedProject)
-
-  function showProject(index) {
-    projectButtons[focusedProject].classList.remove('active')
-    projectButtons[index].classList.add('active')
-    focusedProject = index
+    const projectArticles = Array.prototype.slice.call(
+        document.querySelectorAll('.project-content>p')
+    )
 
     onlyShowOneArticle(projectArticles, focusedProject)
-  }
 
-  function onlyShowOneArticle(articleList, index) {
-    for (let i = 0; i < articleList.length; i++) {
-      if (i == index) articleList[i].style.display = 'block'
-      else articleList[i].style.display = 'none'
+    function showProject(index) {
+        projectButtons[focusedProject].classList.remove('active')
+        projectButtons[index].classList.add('active')
+        focusedProject = index
+
+        onlyShowOneArticle(projectArticles, focusedProject)
     }
-  }
+
+    function onlyShowOneArticle(articleList, index) {
+        for (let i = 0; i < articleList.length; i++) {
+            if (i == index) articleList[i].style.display = 'block'
+            else articleList[i].style.display = 'none'
+        }
+    }
 </script>
 
 <style>
-  .project-section {
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: 3fr 7fr;
-    max-height: calc(9 * 3rem);
-  }
-
-  .project-list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .project-list button {
-    background-color: #dadada;
-    color: var(--color-secondary);
-    text-align: center;
-    height: 3rem;
-    padding: 0 1rem;
-    line-height: 3rem;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-
-  .project-list button:nth-child(2n) {
-    background-color: #e8e8e8;
-  }
-
-  .active {
-    background: var(--color-header-bg);
-    background: linear-gradient(
-      to bottom right,
-      var(--color-hover-bg) 0%,
-      var(--color-hover-fade-to) 100%
-    );
-  }
-
-  .project-content {
-    padding: 1rem;
-    background-color: #f3f3f3;
-    text-align: justify;
-    overflow-y: auto;
-    flex-grow: 3;
-  }
-
-  @media (max-width: 500px) {
     .project-section {
-      grid-auto-flow: column;
-      grid-template-rows: 3rem max-content;
-      grid-template-columns: auto;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr 3fr;
+        max-height: calc(9 * 3rem);
     }
 
     .project-list {
-      overflow: auto hidden;
-      flex-direction: row;
+        display: flex;
+        flex-direction: column;
     }
 
     .project-list button {
-      min-width: 50vw;
-      width: max-content;
-      height: 3rem;
+        background-color: #dadada;
+        color: var(--color-secondary);
+        text-align: left;
+        height: 3rem;
+        padding: 0 1rem;
+        line-height: 3rem;
+        font-size: 1rem;
+        cursor: pointer;
     }
-  }
+
+    .project-list button:nth-child(2n) {
+        background-color: #e8e8e8;
+    }
+
+    .active {
+        background: var(--color-header-bg);
+        background: linear-gradient(
+            to bottom right,
+            var(--color-hover-bg) 0%,
+            var(--color-hover-fade-to) 100%
+        );
+    }
+
+    .project-content {
+        padding: 1rem;
+        background-color: #f3f3f3;
+        text-align: justify;
+        overflow-y: auto;
+        flex-grow: 3;
+    }
+
+    @media (max-width: 500px) {
+        .project-section {
+            grid-auto-flow: column;
+            grid-template-rows: 3rem max-content;
+            grid-template-columns: auto;
+        }
+
+        .project-list {
+            overflow: auto hidden;
+            flex-direction: row;
+        }
+
+        .project-list button {
+            min-width: 50vw;
+            height: 3rem;
+        }
+    }
 </style>

@@ -1,124 +1,123 @@
 ---
-import astroLogo from '/astro-logo.png'
 ---
 
 <footer>
-  <div class="container scroll-hidden">
-    <a
-      href="mailto:anilkarasah+contact@hotmail.com"
-      class="animate"
-      id="email"
-      title="Send an email to contact with me"
-    >
-      Send me an email
-    </a>
-    <p id="copyright">&copy; {new Date().getFullYear()} - Anıl Karaşah</p>
-    <div id="sociallinks">
-      <a
-        href="https://www.linkedin.com/in/anilkarasah"
-        class="social"
-        target="_blank"
-        rel="noopener"
-        title="Linkedin account of Anıl Karaşah"
-      >
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a
-        href="https://www.github.com/anilkarasah"
-        class="social"
-        target="_blank"
-        rel="noopener"
-        title="Github account of Anıl Karaşah"
-      >
-        <i class="fa-brands fa-github"></i>
-      </a>
+    <div class="container scroll-hidden">
+        <a
+            href="mailto:anilkarasah+contact@hotmail.com"
+            class="animate"
+            id="email"
+            title="Send an email to contact with me"
+        >
+            Send me an email
+        </a>
+        <p id="copyright">&copy; {new Date().getFullYear()} - Anıl Karaşah</p>
+        <div id="sociallinks">
+            <a
+                href="https://www.linkedin.com/in/anilkarasah"
+                class="social"
+                target="_blank"
+                rel="noopener"
+                title="Linkedin account of Anıl Karaşah"
+            >
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+                href="https://www.github.com/anilkarasah"
+                class="social"
+                target="_blank"
+                rel="noopener"
+                title="Github account of Anıl Karaşah"
+            >
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
     </div>
-  </div>
 </footer>
 
 <style>
-  footer {
-    padding: 1.5rem;
-    height: 5rem;
-    width: 100%;
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-  }
-
-  footer > .container {
-    height: 2rem;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-  }
-
-  a#email {
-    color: var(--color-primary);
-    font-weight: 300;
-    line-height: 2rem;
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  #sociallinks {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    justify-content: center;
-    align-items: center;
-  }
-
-  a.social {
-    font-size: 1.5rem;
-    color: var(--color-primary);
-    transform: translateY(0);
-    transition: transform 0.2s;
-  }
-
-  a.social:hover,
-  a.social:focus {
-    transform: translateY(-0.2rem);
-  }
-
-  p#copyright {
-    height: 2rem;
-    line-height: 2rem;
-    display: flex;
-    flex-direction: row;
-    gap: 0.2rem;
-    align-items: center;
-    justify-content: baseline;
-  }
-
-  #footer--astro-logo {
-    height: 1.5rem;
-    transform: none;
-    transition: transform 0.2s ease-in-out;
-  }
-
-  #footer--astro-logo:hover,
-  #footer--astro-logo:focus {
-    transform: translateY(-0.3rem) translateX(0.2rem) rotate(15deg);
-  }
-
-  #footer--astro-logo > img {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-  @media (max-width: 470px) {
     footer {
-      height: 7rem;
+        padding: 1.5rem;
+        height: 5rem;
+        width: 100%;
+        background-color: var(--color-secondary);
+        color: var(--color-primary);
     }
 
     footer > .container {
-      flex-wrap: wrap;
+        height: 2rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    a#email {
+        color: var(--color-primary);
+        font-weight: 300;
+        line-height: 2rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #sociallinks {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a.social {
+        font-size: 1.5rem;
+        color: var(--color-primary);
+        transform: translateY(0);
+        transition: transform 0.2s;
+    }
+
+    a.social:hover,
+    a.social:focus {
+        transform: translateY(-0.2rem);
     }
 
     p#copyright {
-      justify-content: center;
-      flex-basis: 100%;
-      order: 3;
+        height: 2rem;
+        line-height: 2rem;
+        display: flex;
+        flex-direction: row;
+        gap: 0.2rem;
+        align-items: center;
+        justify-content: baseline;
     }
-  }
+
+    #footer--astro-logo {
+        height: 1.5rem;
+        transform: none;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    #footer--astro-logo:hover,
+    #footer--astro-logo:focus {
+        transform: translateY(-0.3rem) translateX(0.2rem) rotate(15deg);
+    }
+
+    #footer--astro-logo > img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    @media (max-width: 470px) {
+        footer {
+            height: 7rem;
+        }
+
+        footer > .container {
+            flex-wrap: wrap;
+        }
+
+        p#copyright {
+            justify-content: center;
+            flex-basis: 100%;
+            order: 3;
+        }
+    }
 </style>
