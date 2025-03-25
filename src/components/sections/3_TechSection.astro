@@ -1,17 +1,31 @@
 ---
-const languages: string[] = ['C', 'C#', 'Java', 'Javascript', 'HTML/CSS', 'SQL']
+const languages: string[] = [
+    'C#', 
+    'Java', 
+    'Javascript', 
+    'HTML', 
+    'CSS',
+    'SQL',
+    'C',
+    'Python',
+]
+
 const technologies: string[] = [
     '.NET Core',
+    '.NET Framework',
     'PostgreSQL',
     'Linux',
     'Elasticsearch',
     'Redis',
     'Git',
+    'Linux',
+    'AutoGen',
     'Node.js',
     'MongoDB',
     'Docker',
+    'Grafana',
     'Angular',
-    'Astro'
+    'Astro',
 ]
 ---
 
@@ -35,13 +49,16 @@ const technologies: string[] = [
     container {
         color: var(--color-secondary);
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
     }
 
     ul {
         display: flex;
         flex-direction: row;
         width: 100%;
-        height: 2.5rem;
+        /* height: 2.5rem; */
         margin: 1rem 0;
         flex-wrap: wrap;
     }

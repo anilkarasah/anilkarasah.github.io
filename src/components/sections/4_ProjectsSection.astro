@@ -5,7 +5,7 @@ const projects = (await Astro.glob('../../pages/projects/*.md')).sort(
 let focusedProject: Number = 0
 ---
 
-<container>
+<container id="contributions">
     <div class="container flex flex-column flex-gap">
         <h1 tabindex="0" class="scroll-hidden">Contributions</h1>
         <div class="project-section box-shadow scroll-hidden">

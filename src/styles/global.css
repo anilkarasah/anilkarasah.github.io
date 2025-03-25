@@ -109,7 +109,10 @@ body {
 /* CONTAINER CLASSES */
 main {
   width: 100%;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 container {
@@ -135,7 +138,7 @@ container h1 {
 }
 
 .container {
-  width: 70vw;
+  width: 50vw;
   margin: auto;
 }
 
